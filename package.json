@@ -1,0 +1,26 @@
+{
+  "name": "front",
+  "version": "1.0.0",
+  "description": "free4lab new front",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zrss/Front.git"
+  },
+  "author": "free4lab",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zrss/Front/issues"
+  },
+  "homepage": "https://github.com/zrss/Front#readme",
+  "devDependencies": {
+    "bootstrap-sass": "^3.3.5",
+    "browser-sync": "^2.9.11",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.0.2",
+    "gulp-sass": "^2.0.4"
+  }
+}
