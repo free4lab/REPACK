@@ -21,6 +21,7 @@
     "browser-sync": "^2.9.11",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^3.0.2",
+    "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.0.4"
   }
 }
