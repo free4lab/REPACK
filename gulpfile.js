@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
 var browserSync = require('browser-sync').create();
+var rename = require('gulp-rename');
 
 // Path config
 var config = {
@@ -11,11 +12,15 @@ var config = {
   devDir: './src/dev'
 };
 
-// Bootstrap Sass (Currently useless)
+// Bootstrap Sass
 gulp.task('bootstrapSassConvert', function () {
   return gulp.src(config.sourceDir + '/sass/app.scss')
   .pipe(sass({
     includePaths: [config.bootstrapDir + '/assets/stylesheets']
+  }))
+  .pipe(rename({
+    basename: 'bootstrap',
+    extname: '.css'
   }))
   .pipe(gulp.dest(config.devDir + '/css'));
 });
