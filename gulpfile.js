@@ -33,12 +33,18 @@ gulp.task('browserSync', function () {
   })
 });
 
+// Sass to Css
+gulp.task('sass', function () {
+  gulp.src('./src/sass/*.scss')
+    .pipe(sass().on('error', sass.logError))
+    .pipe(autoprefixer())
+    .pipe(gulp.dest(config.devDir + '/css'))
+    .pipe(browserSync.reload({stream: true}));
+});
+
 // Watch change
-gulp.task('watch', ['browserSync'], function () {
-  gulp.watch('./src/sass/*.scss', function (event) {
-    gulp.src(event.path).pipe(sass()).pipe(autoprefixer()).pipe(gulp.dest(config.devDir + '/css'));
-    browserSync.reload();
-  });
+gulp.task('watch', ['browserSync', 'sass'], function () {
+  gulp.watch('./src/sass/*.scss', ['sass']);
   gulp.watch('./src/dev/**/*.html', browserSync.reload);
 });
 
