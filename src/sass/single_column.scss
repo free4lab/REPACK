@@ -1,1 +1,57 @@
 @import "variables";
+body {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	line-height: 1.42857143;
+	color: $bodyFontColor;
+	background-color: #fff
+}
+body{
+	margin:0;
+}
+html, body{
+    height: 100%;
+}
+body {
+    font-family: "Helvetica Neue", Helvetica, Microsoft Yahei, Hiragino Sans GB, WenQuanYi Micro Hei, sans-serif;
+}
+
+
+.text-center {
+	text-align: center
+}
+.row {
+	margin-right: -15px;
+	margin-left: -15px
+}
+.front-body {
+    background-color: $bodyColor;
+}
+.front-inner {
+    padding-top: 70px;
+    padding-bottom: 40px;
+    position: relative;
+    clear: both;
+    min-height:100%;
+}
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+  margin-left: auto;
+}
+
