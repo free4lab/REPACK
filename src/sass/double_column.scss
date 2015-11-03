@@ -4,10 +4,10 @@ body {
 	color: $bodyFontColor;
 	background-color: #fff
 }
-body {
+body{
 	margin:0;
 }
-html, body {
+html, body{
     height: 100%;
 }
 .front-body {
@@ -19,4 +19,18 @@ html, body {
     position: relative;
     clear: both;
     min-height:100%;
+}
+.front-last-no-margin p:last-child{ /* 最后一个p不加margin */
+    margin: 0 0;
+}
+.panel-default > .panel-heading {
+    color: $noticeHeaderFontColor;
+    background-color: $noticeHeaderColor;
+    border-color: $noticeHeaderBorderColor;
+}
+.panel-body {
+    background-color: $noticeBodyColor;
+}
+.text-primary {
+    color:$noticeBodyFontColor;
 }
