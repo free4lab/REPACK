@@ -1,0 +1,320 @@
+@charset "UTF-8";
+body {
+  font-family: "Helvetica Neue", Helvetica, Microsoft Yahei, Hiragino Sans GB, WenQuanYi Micro Hei, sans-serif;
+  color: #333;
+  background-color: #fff; }
+
+body {
+  margin: 0; }
+
+html, body {
+  height: 100%; }
+
+.front-body {
+  background-color: #e7e7e7; }
+
+.front-inner {
+  padding-top: 70px;
+  padding-bottom: 40px;
+  position: relative;
+  clear: both;
+  min-height: 100%; }
+
+.front-last-no-margin p:last-child {
+  /* 最后一个p不加margin */
+  margin: 0 0; }
+
+.panel-default > .panel-heading {
+  color: #333;
+  background-color: #f5f5f5;
+  border-color: #ddd; }
+
+.panel-body {
+  background-color: #fff; }
+
+.text-primary {
+  color: #337ab7; }
+
+.footer-default, .footer-inverse {
+  width: 100%;
+  height: 40px;
+  position: absolute;
+  bottom: 0; }
+
+.footer-default {
+  background-color: #f8f8f8;
+  background-image: url(""); }
+
+.footer-default > div, .footer-inverse > div {
+  padding-top: 10px; }
+
+.footer {
+  display: block; }
+
+@charset "UTF-8";
+.navbar-default {
+  border-color: #e7e7e7;
+  background-image: url(""); }
+
+/* 导航栏横向菜单当前菜单样式 */
+.front-active:after {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: #3778bc;
+  content: ''; }
+
+.navbar-default .navbar-nav > li > a {
+  color: #777; }
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #333;
+  background-color: transparent; }
+
+/* 移动端 */
+@media (max-width: 767px) {
+  /* 品牌图片在移动端时缩放并居中 */
+  .nav-brand {
+    float: left;
+    width: 25%;
+    height: 50px;
+    position: relative;
+    margin-left: 15px; }
+  .nav-brand img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto; }
+  /* 导航栏右侧按钮间距 & 正常图标 */
+  .nav-right .area-media {
+    margin: 18px 0 18px 15px;
+    height: 14px;
+    /* 固定高度为14 */ }
+  /* 触发左侧栏按钮 */
+  .nav-toggle-left {
+    position: fixed;
+    top: 70px;
+    left: 15px;
+    height: 50px;
+    width: 50px;
+    opacity: .6;
+    /* 透明 */ }
+  /* 用户头像箭头位置 */
+  .nav-avatar-menu .arrow {
+    right: 40px; }
+  /* 产品导航菜单箭头位置 */
+  .nav-pro > .arrow {
+    right: 90px; }
+  /* 横向菜单转垂直菜单，默认隐藏 */
+  .nav-collapse {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+    background-color: #f8f8f8;
+    border-top: 1px solid #e7e7e7;
+    padding: 0 15px; }
+  /* 导航栏去掉左右padding */
+  .front-nav .container {
+    padding: 0; }
+  /* 最右侧padding */
+  .nav-toggle-down {
+    padding: 18px 15px;
+    height: 14px; }
+  /* 弹出菜单右侧调节 */
+  .nav-popover-media {
+    right: 15px; }
+  /* 侧栏滚动 */
+  .nav-left-offcanvas {
+    position: fixed;
+    left: -50%;
+    width: 50%;
+    -webkit-transition: all 0.2s ease-out;
+    /* 动画效果 */
+    transition: all 0.2s ease-out;
+    /* 动画效果 */ }
+  .nav-left-offcanvas.open {
+    left: 0; }
+  .front-canvas {
+    position: relative;
+    left: 0;
+    -webkit-transition: all 0.2s ease-out;
+    /* 动画效果 */
+    transition: all 0.2s ease-out;
+    /* 动画效果 */ }
+  .front-canvas.open {
+    left: 50%; }
+  /* 左侧栏出现时阻止滚动 */
+  .front-inner-media {
+    overflow-x: hidden; } }
+
+/* 桌面端 */
+@media (min-width: 768px) {
+  /* 品牌 */
+  .nav-brand {
+    float: left;
+    padding: 10px 15px 10px 0; }
+  /* 导航栏右侧按钮大图标 */
+  .nav-right .area-media {
+    line-height: 20px;
+    font-size: 20px;
+    margin: 15px 0 15px 15px;
+    height: 20px;
+    /* 固定高度为20 */ }
+  /* 用户头像箭头位置 */
+  .nav-avatar-menu .arrow {
+    right: 10px; }
+  /* 产品导航菜单箭头位置 */
+  .nav-pro > .arrow {
+    right: 61px; }
+  /* 显示横向菜单 */
+  .nav-collapse {
+    display: block !important;
+    visibility: visible !important; }
+  /* 弹出菜单右侧调节 */
+  .nav-popover-media {
+    right: 0; }
+  /* 侧边栏触发 */
+  .nav-toggle-left {
+    display: none; } }
+
+/* 导航栏头像 */
+.nav-avatar {
+  height: 46px;
+  width: 46px; }
+
+/* 导航栏右侧 */
+.nav-right {
+  position: relative;
+  float: right; }
+
+/* 导航栏右侧按钮通用样式 */
+.nav-right > .area {
+  float: left;
+  color: #777;
+  cursor: pointer;
+  top: 0;
+  /* 清除glyphicon top: 1px*/ }
+
+/* 头像间距 */
+.nav-right > .area-avatar {
+  margin: 0 0 0 15px; }
+
+/* 头像位置调整 */
+.nav-avatar {
+  position: relative;
+  top: 2px; }
+
+/* 产品导航图标 */
+.nav-app {
+  height: 24px;
+  width: 24px;
+  margin-top: 12px; }
+
+/* 导航栏弹出菜单 */
+.nav-popover {
+  position: absolute;
+  z-index: 1060;
+  display: none;
+  left: auto;
+  top: 50px;
+  max-width: 276px;
+  padding: 1px;
+  text-align: left;
+  white-space: normal;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.2); }
+
+/* 弹出菜单箭头 */
+.nav-popover > .arrow,
+.nav-popover > .arrow:after {
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid; }
+
+.nav-popover > .arrow {
+  border-width: 11px; }
+
+.nav-popover > .arrow:after {
+  content: "";
+  border-width: 10px; }
+
+.nav-popover.bottom > .arrow {
+  top: -11px;
+  left: auto;
+  margin-left: -11px;
+  border-top-width: 0;
+  border-bottom-color: #999;
+  border-bottom-color: rgba(0, 0, 0, 0.25); }
+
+.nav-popover.bottom > .arrow:after {
+  top: 1px;
+  margin-left: -10px;
+  content: " ";
+  border-top-width: 0;
+  border-bottom-color: #fff; }
+
+/* 产品导航弹出菜单 */
+.nav-pro {
+  padding: 5px; }
+
+.nav-pro ul {
+  list-style: none;
+  padding-left: 0;
+  width: 240px; }
+
+.nav-pro ul > li {
+  float: left;
+  position: relative;
+  padding: 5px;
+  width: 120px; }
+
+.nav-pro ul > li img {
+  position: relative;
+  z-index: 1; }
+
+.nav-pro ul > li img:hover {
+  -ms-transform: scale(1.05);
+      transform: scale(1.05);
+  -webkit-transform: scale(1.05); }
+
+/* 用户菜单 */
+.nav-avatar-menu ul {
+  z-index: 1000;
+  float: left;
+  min-width: 200px;
+  padding: 5px 0;
+  margin: 2px 0 0;
+  text-align: left;
+  list-style: none;
+  background-color: #fff;
+  background-clip: padding-box; }
+
+.nav-avatar-menu ul .divider {
+  height: 1px;
+  margin: 9px 0;
+  overflow: hidden;
+  background-color: #e5e5e5; }
+
+.nav-avatar-menu ul > li > a {
+  display: block;
+  padding: 3px 20px;
+  clear: both;
+  color: #333;
+  white-space: nowrap; }
+
+.nav-avatar-menu ul > li > a:hover,
+.nav-avatar-menu ul > li > a:focus {
+  color: #262626;
+  text-decoration: none;
+  background-color: #f5f5f5; }
