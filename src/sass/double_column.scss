@@ -28,6 +28,9 @@ html, body{
     background-color: $noticeHeaderColor;
     border-color: $noticeHeaderBorderColor;
 }
+.panel-default {
+    border-color: $noticeHeaderBorderColor;
+}
 .panel-body {
     background-color: $noticeBodyColor;
 }
