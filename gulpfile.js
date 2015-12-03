@@ -35,7 +35,7 @@ gulp.task('fonts', function () {
 // Web Server
 gulp.task('browserSync', function () {
   browserSync.init({
-    server: './src',
+    server: './src/dev',
     port: '3000'
   })
 });

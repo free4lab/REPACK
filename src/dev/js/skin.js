@@ -13,7 +13,7 @@ function setSkin(curSkin,newSkin){
     nSetCookie("skin",newSkin,'d7')
 }
 
-  function nSetCookie(name,value,time)
+function nSetCookie(name,value,time)
 {
     var strsec = getsec(time);
     var exp = new Date();
