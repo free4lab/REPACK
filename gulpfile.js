@@ -3,6 +3,8 @@ var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
 var browserSync = require('browser-sync').create();
 var rename = require('gulp-rename');
+var concat = require('gulp-concat');
+var minifycss = require('gulp-minify-css');
 
 // Path config
 var config = {
@@ -33,7 +35,7 @@ gulp.task('fonts', function () {
 // Web Server
 gulp.task('browserSync', function () {
   browserSync.init({
-    server: './src/dev',
+    server: './src',
     port: '3000'
   })
 });
@@ -45,6 +47,16 @@ gulp.task('sass', function () {
     .pipe(autoprefixer())
     .pipe(gulp.dest(config.devDir + '/css'))
     .pipe(browserSync.reload({stream: true}));
+});
+
+//concat and minify css
+gulp.task('createSkin', function() {
+  return gulp.src(['src/dev/css/double_column.css','src/dev/css/footer.css','src/dev/css/navbar.css'])
+    .pipe(concat('skin2.css'))
+    .pipe(gulp.dest('src/dev/css/skin'))
+    .pipe(rename({ suffix: '.min' }))
+    .pipe(minifycss())
+    .pipe(gulp.dest('src/dev/css/skin'))
 });
 
 // Watch change
