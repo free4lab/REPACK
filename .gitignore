@@ -2,4 +2,7 @@
 .DS_Store
 
 # Folders to ignore
-node_modules
+node_modules/
+
+# IDE
+.idea/
