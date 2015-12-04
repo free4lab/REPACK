@@ -5,6 +5,7 @@ var browserSync = require('browser-sync').create();
 var rename = require('gulp-rename');
 var concat = require('gulp-concat');
 var minifycss = require('gulp-minify-css');
+var del = require('del');
 
 // Path config
 var config = {
@@ -20,9 +21,9 @@ gulp.task('bootstrapSassConvert', function () {
       .pipe(sass({
         includePaths: [config.bootstrapDir + '/assets/stylesheets']
       }))
+      .pipe(minifycss())
       .pipe(rename({
-        basename: 'bootstrap',
-        extname: '.css'
+        suffix: '.min'
       }))
       .pipe(gulp.dest(config.devDir + '/css'));
 });
@@ -39,11 +40,17 @@ gulp.task('frontSassConvert', function () {
       .pipe(sass())
       .pipe(autoprefixer())
       .pipe(minifycss())
+      .pipe(rename({suffix: '.min'}))
       .pipe(gulp.dest(config.devDir + '/css'));
 });
 
 // Build
 gulp.task('build', ['bootstrapSassConvert', 'fonts', 'frontSassConvert']);
+
+// Clean
+gulp.task('clean:build', function () {
+  return del([config.devDir + '/css/front.css', config.devDir + '/css/bootstrap.css']);
+});
 
 // Web Server
 gulp.task('browserSync', function () {
@@ -53,30 +60,21 @@ gulp.task('browserSync', function () {
   })
 });
 
-// Sass to Css
-gulp.task('sass', function () {
-  gulp.src('./src/sass/*.scss')
-      .pipe(sass().on('error', sass.logError))
-      .pipe(autoprefixer())
-      .pipe(gulp.dest(config.devDir + '/css'))
-      .pipe(browserSync.reload({stream: true}));
-});
-
 //concat and minify css
 gulp.task('createSkin', function() {
   return gulp.src(['src/dev/css/double_column.css','src/dev/css/footer.css','src/dev/css/navbar.css'])
       .pipe(concat('skin2.css'))
       .pipe(gulp.dest('src/dev/css/skin'))
-      .pipe(rename({ suffix: '.min' }))
+      .pipe(rename({suffix: '.min'}))
       .pipe(minifycss())
       .pipe(gulp.dest('src/dev/css/skin'))
 });
 
 // Watch change
-gulp.task('watch', ['browserSync', 'sass'], function () {
-  gulp.watch('./src/sass/*.scss', ['sass']);
+gulp.task('watch', ['browserSync'], function () {
+  gulp.watch('./src/sass/*.scss', ['build', 'clean:build']);
   gulp.watch('./src/dev/**/*.html', browserSync.reload);
 });
 
 // Default task
-gulp.task('default', ['watch']);
+gulp.task('default', ['build', 'watch']);
