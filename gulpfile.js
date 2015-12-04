@@ -16,21 +16,34 @@ var config = {
 
 // Bootstrap Sass
 gulp.task('bootstrapSassConvert', function () {
-  return gulp.src(config.sourceDir + '/sass/app.scss')
-  .pipe(sass({
-    includePaths: [config.bootstrapDir + '/assets/stylesheets']
-  }))
-  .pipe(rename({
-    basename: 'bootstrap',
-    extname: '.css'
-  }))
-  .pipe(gulp.dest(config.devDir + '/css'));
+  return gulp.src(config.sourceDir + '/sass/bootstrap.scss')
+      .pipe(sass({
+        includePaths: [config.bootstrapDir + '/assets/stylesheets']
+      }))
+      .pipe(rename({
+        basename: 'bootstrap',
+        extname: '.css'
+      }))
+      .pipe(gulp.dest(config.devDir + '/css'));
 });
 
 // Bootstrap Fonts
 gulp.task('fonts', function () {
-  return gulp.src(config.bootstrapDir + '/assets/fonts/bootstrap/**/*').pipe(gulp.dest(config.devDir + '/fonts'));
+  return gulp.src(config.bootstrapDir + '/assets/fonts/bootstrap/**/*')
+      .pipe(gulp.dest(config.devDir + '/fonts'));
 });
+
+// Front CSS
+gulp.task('frontSassConvert', function () {
+  return gulp.src(config.sourceDir + '/sass/front.scss')
+      .pipe(sass())
+      .pipe(autoprefixer())
+      .pipe(minifycss())
+      .pipe(gulp.dest(config.devDir + '/css'));
+});
+
+// Build
+gulp.task('build', ['bootstrapSassConvert', 'fonts', 'frontSassConvert']);
 
 // Web Server
 gulp.task('browserSync', function () {
@@ -43,20 +56,20 @@ gulp.task('browserSync', function () {
 // Sass to Css
 gulp.task('sass', function () {
   gulp.src('./src/sass/*.scss')
-    .pipe(sass().on('error', sass.logError))
-    .pipe(autoprefixer())
-    .pipe(gulp.dest(config.devDir + '/css'))
-    .pipe(browserSync.reload({stream: true}));
+      .pipe(sass().on('error', sass.logError))
+      .pipe(autoprefixer())
+      .pipe(gulp.dest(config.devDir + '/css'))
+      .pipe(browserSync.reload({stream: true}));
 });
 
 //concat and minify css
 gulp.task('createSkin', function() {
   return gulp.src(['src/dev/css/double_column.css','src/dev/css/footer.css','src/dev/css/navbar.css'])
-    .pipe(concat('skin2.css'))
-    .pipe(gulp.dest('src/dev/css/skin'))
-    .pipe(rename({ suffix: '.min' }))
-    .pipe(minifycss())
-    .pipe(gulp.dest('src/dev/css/skin'))
+      .pipe(concat('skin2.css'))
+      .pipe(gulp.dest('src/dev/css/skin'))
+      .pipe(rename({ suffix: '.min' }))
+      .pipe(minifycss())
+      .pipe(gulp.dest('src/dev/css/skin'))
 });
 
 // Watch change
