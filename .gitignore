@@ -2,7 +2,7 @@
 .DS_Store
 
 # Dev
-src/
+src
 gulpfile.js
 package.json
 
@@ -10,4 +10,4 @@ package.json
 node_modules/
 
 # IDE
-.idea/
+.idea
