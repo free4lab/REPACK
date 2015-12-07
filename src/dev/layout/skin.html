@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DoubleColumnTest</title>
+  <link rel="stylesheet" href="/bootstrap/css/bootstrap.css"/>
+  <link id="skin" rel="stylesheet" href="/css/skin/skin1.min.css">
+</head>
+<body class="front-body">
+  <nav class="navbar navbar-default navbar-fixed-top front-nav">
+    <div class="container">
+      <div>
+        <!-- 左侧栏移动端触发：可选  -->
+        <img class="nav-toggle-left" id="front-nav-toggle-left" alt="SidebarToggle"/>
+        <!-- -->
+        <!-- 品牌图片大小为150 * 30：宽度不定，高度固定30px -->
+        <div class="nav-brand"><a href="#"><img src="../img/logo.png" alt="brand" class="img-responsive"/></a></div>
+        <!-- -->
+      </div>
+      <div class="nav-collapse collapse" id="nav-collapse-demo">
+        <ul class="nav navbar-nav">
+          <li class="front-active"><a href="#">菜单1</a></li> <!-- 激活菜单 -->
+          <li><a href="#">菜单2</a></li>
+          <!-- 下拉菜单 -->
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">菜单3<span class="caret"></span></a>
+            <ul class="dropdown-menu nav-dropdown">
+              <li><a href="#">下拉菜单3.1</a></li>
+              <li><a href="#">下拉菜单3.2</a></li>
+              <li><a href="#">下拉菜单3.3</a></li>
+              <li><a href="#">下拉菜单3.4</a></li>
+            </ul>
+          </li>
+          <!-- end 下拉菜单 -->
+        </ul>
+      </div>
+      <div class="nav-right">
+        <!-- 搜索图标：可选 -->
+        <div class="area area-media"><a onclick="changeSkin()">换肤</a><span class="glyphicon glyphicon-search nav-search-icon"></span></div>
+        <!-- -->
+        <!-- 产品导航菜单按钮 -->
+        <div class="area area-avatar area-media"><img class="nav-avatar nav-app" data-gen="nav-pro" data-toggle="front-popover-bottom" data-target="#nav-pro-demo"></div>
+        <!-- -->
+        <!-- 导航栏用户头像 -->
+        <div class="area area-avatar area-media"><img src="../img/avatar-demo.jpg" class="img-circle nav-avatar" alt="avatar" data-toggle="front-popover-bottom" data-target="#nav-user-demo"/></div>
+        <!-- -->
+        <!-- 横向导航栏移动端触发：可选 -->
+        <div class="area visible-xs nav-toggle-down" data-toggle="collapse" data-target="#nav-collapse-demo"><span class="glyphicon glyphicon-menu-hamburger" id="front-nav-toggle-down-demo"></span></div>
+        <!-- -->
+        <!-- 产品导航菜单 -->
+        <div id="nav-pro-demo" data-pro="5"></div>
+        <!-- 用户菜单 -->
+        <div id="nav-user-demo" class="bottom nav-popover nav-popover-media nav-avatar-menu">
+          <div class="arrow"></div>
+          <ul>
+            <li class="text-center">
+              <a href="#">
+                <!-- 用户头像 -->
+                <img src="../img/avatar-demo.jpg" alt="avatar" class="img-circle img-lg-avatar"/>
+                <!-- end 用户头像 -->
+              </a>
+              <div>用户昵称</div>
+              <div><small>用户邮箱</small></div>
+            </li>
+            <li class="divider"></li> <!-- 分界线 -->
+            <li class="clearfix">
+              <div class="col-xs-4 text-center">信息1</div>
+              <div class="col-xs-4 text-center">信息2</div>
+              <div class="col-xs-4 text-center">信息3</div>
+            </li>
+            <li class="divider"></li> <!-- 分界线 -->
+            <li><a href="#"><span class="glyphicon glyphicon-log-out"></span>&nbsp;&nbsp;退出</a></li>
+          </ul>
+        </div>
+        <!-- end 用户菜单 -->
+      </div>
+    </div>
+  </nav>
+  <div class="front-inner">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-9">长夜将至，我从今开始守望，至死方休。我将不娶妻，不封地，不生子。我将不戴宝冠，不争荣宠。我将尽忠职守，生死于斯。我是黑暗中的利剑，长城上的守卫，抵御寒冷的烈焰，破晓时分的光线，唤醒眠者的号角，守护王国的坚盾。我将生命与荣耀献给守夜人，今夜如此，夜夜皆然。</div>
+        <div class="col-md-3">
+          <div class="panel panel-default front-panel">
+            <div class="panel-heading">
+              <span>技术评估</span>
+            </div>
+            <div class="panel-body front-last-no-margin">
+              <p>
+                <span class="text-primary"> 调查研究</span>
+              </p>
+              <p>
+                <span class="text-primary"> 寻找影响</span>
+              </p>
+              <p>
+                <span class="text-primary"> 影响分析</span>
+              </p>
+            </div>        
+          </div>
+          <div class="panel panel-default front-panel">
+            <div class="panel-heading">
+              <span>技术评估</span>
+            </div>
+            <div class="panel-body front-last-no-margin">
+              <p>
+                <span class="text-primary"> 调查研究</span>
+              </p>
+              <p>
+                <span class="text-primary"> 寻找影响</span>
+              </p>
+              <p>
+                <span class="text-primary"> 影响分析</span>
+              </p>
+              <p>
+                <span class="text-primary"> 排除非容忍性影响</span>
+              </p>
+              <p>
+                <span class="text-primary"> 制定改良方案</span>
+              </p>
+            </div>        
+          </div>
+          <div class="panel panel-default front-panel">
+            <div class="panel-heading">
+              <span>技术评估</span>
+            </div>
+            <div class="panel-body front-last-no-margin">
+              <p>
+                <span class="text-primary"> 调查研究</span>
+              </p>
+              <p>
+                <span class="text-primary"> 寻找影响</span>
+              </p>
+              <p>
+                <span class="text-primary"> 影响分析</span>
+              </p>
+            </div>        
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer-default">
+        <div class="text-center">Copyright © All Right Reserved by BUPT(2015)</div>
+    </footer>
+  </div>
+</body>
+<script src="/js/jquery/jquery.min.js"></script>
+<script src="/bootstrap/js/bootstrap.js"></script>
+<script src="/js/plugin/front.js"></script>
+<script src="/js/skin.js"></script>
+<script >
+  $(document).ready(function(){
+    var curSkin = nGetCookie("skin");
+    if(curSkin == "" || curSkin == null) {
+      nSetCookie("skin","skin1",'d7')
+    }else{
+      if(curSkin == "skin2"){
+        setSkin("skin1",curSkin)
+      }
+    }
+  })
+</script>
+</html>

@@ -3,6 +3,11 @@
 
 # Dev
 src/
+gulpfile.js
+package.json
 
-# node_modules
+# Folders to ignore
 node_modules/
+
+# IDE
+.idea/

@@ -1,4 +1,4 @@
-# Front
+# FrontLab
 free4lab new front
 
 ## 快速使用 Quick Start Use
