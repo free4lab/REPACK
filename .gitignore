@@ -1,11 +1,6 @@
 # OS
 .DS_Store
 
-# Dev
-src
-gulpfile.js
-package.json
-
 # Folders to ignore
 node_modules/
 
