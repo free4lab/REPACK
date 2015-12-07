@@ -1,12 +1,13 @@
-/* 卡片 */
-.panel-default > .panel-heading {
-  color: $noticeHeaderFontColor;
-  background-color: $noticeHeaderColor;
-  border-color: $noticeHeaderBorderColor;
+/* 主题卡片 */
+.theme-panel {
+  border-color: $panelHeaderBorderColor;
+  background-color: $panelBackgroundColor;
 }
-.panel-default {
-  border-color: $noticeHeaderBorderColor;
+.theme-panel > .panel-heading {
+  color: $panelHeaderFontColor;
+  background-color: $panelHeaderColor;
+  border-color: $panelHeaderBorderColor;
 }
-.panel-body {
-  background-color: $noticeBodyColor;
+.theme-panel > .panel-body {
+  background-color: $panelBodyColor;
 }
