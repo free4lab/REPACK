@@ -653,6 +653,9 @@ if (typeof jQuery === 'undefined') {
         .removeClass('collapsing')
         .addClass('collapse')
         .trigger('hidden.bs.collapse')
+
+      //去掉样式'height:0',不然会有回到大分辨率后元素向下偏移的问题。
+      this.$element.removeAttr('style');
     }
 
     if (!$.support.transition) return complete.call(this)
