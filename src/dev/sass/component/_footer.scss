@@ -1,0 +1,13 @@
+.footer-default, .footer-inverse {
+    width: 100%;
+    height: 40px;
+    position: absolute;
+    bottom: 0
+}
+.footer-default {
+    background-color: $footerColor;
+    background-image: url($footerImgUrl);
+}
+.footer-default > div, .footer-inverse > div {
+    padding-top: 10px;
+}
