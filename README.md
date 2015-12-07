@@ -26,10 +26,14 @@ Install Dependency
 
     npm install
     
-Build CSS
-
-    gulp build
-    
 Run WebServer
 
     gulp
+    
+Release
+
+    gulp dist:build
+    
+Clean
+
+    gulp clean
