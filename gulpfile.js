@@ -109,6 +109,12 @@ gulp.task('dist:build', ['dev:build'], function () {
       .pipe(rename({suffix: '.min'}))
       .pipe(gulp.dest(config.publicDir + '/css'));
 
+  // Theme CSS
+  gulp.src(config.devDir + '/css/theme/*.css')
+      .pipe(minifycss())
+      .pipe(rename({suffix: '.min'}))
+      .pipe(gulp.dest(config.publicDir + '/css/theme'));
+
   // Bootstrap JS
   gulp.src(config.devDir + '/bootstrap/js/bootstrap.js')
       .pipe(uglify())
