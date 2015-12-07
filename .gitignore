@@ -1,2 +1,8 @@
 # OS
 .DS_Store
+
+# Dev
+src/
+
+# node_modules
+node_modules/
