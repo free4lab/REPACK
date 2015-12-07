@@ -15,7 +15,7 @@ free4lab new front
     
 ### 引用本地资源 reference local resources
 
-    git clone https://github.com/zrss/Front.git
+    git clone https://github.com/free4lab/FrontLab.git
     
 或者 or
 
