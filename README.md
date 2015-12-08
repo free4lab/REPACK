@@ -53,6 +53,10 @@ Switch to develop branch
 
     git checkout -b develop origin/develop
     
+Install Workflow Tool *Gulp*
+    
+    npm install gulp -g
+    
 Install Dependency
 
     npm install
