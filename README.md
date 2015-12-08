@@ -57,6 +57,10 @@ Install Dependency
 
     npm install
     
+Install Workflow Tool *Gulp*
+    
+    npm install gulp -g
+    
 Run WebServer
 
     gulp
