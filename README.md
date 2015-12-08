@@ -13,12 +13,12 @@ free4lab new front
 
     # CSS
     <link rel="stylesheet" href="http://newfront.free4lab.com/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="http://newfront.free4lab.com/css/front.min.css">
+    <link rel="stylesheet" href="http://newfront.free4lab.com/css/front.css">
     
     # JS
     <script src="http://newfront.free4lab.com/js/jquery/jquery.min.js"></script>
     <script src="http://newfront.free4lab.com/bootstrap/js/bootstrap.min.js"></script>
-    <script src="http://newfront.free4lab.com/js/plugin/front.min.js"></script>
+    <script src="http://newfront.free4lab.com/js/plugin/front.js"></script>
     
 ### 引用本地资源 reference local resources
 
