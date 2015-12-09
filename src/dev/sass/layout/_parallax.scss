@@ -1,0 +1,48 @@
+.parallax #first{
+  background-image: $parallax_1;
+  height: 960px;
+  background-position: 50% 0px;
+}
+.parallax #second{
+  background-image: $parallax_2;
+  height: 600px;
+  background-position: 50%;
+  background-color: white;
+}
+.parallax #third{
+  background-image: $parallax_3;
+  height: 670px;
+  background-position: 50% 267px;
+}
+.parallax #fourth{
+  background-image: $parallax_4;
+  height: 560px;
+  background-position: 50%;
+  background-color: white;
+}
+.parallax #fifth{
+  background-image: $parallax_5;
+  height: 670px;
+  background-position: 50% 267px;
+}
+.parallax #sixth{
+  background-image: $parallax_6;
+  height: 560px;
+  background-position: 50%;
+  background-color: white;
+}
+.parallax .content{
+  padding-top: 200px;
+  padding-left: 100px;
+}
+.parallax .content span{
+  font-size: 102px;
+  line-height: 102px;
+  font-weight: 100;
+  color: #ffffff;
+  padding: 0px;
+}
+
+#second span, #fourth span, #sixth span{
+  color:#000;
+}
