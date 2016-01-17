@@ -116,6 +116,53 @@ input.form-control {
     padding: 15px;
     line-height: 20px; } }
 
+.parallax #first {
+  background-image: url(../img/pic1.jpg);
+  height: 960px;
+  background-position: 50% 0px; }
+
+.parallax #second {
+  background-image: "";
+  height: 600px;
+  background-position: 50%;
+  background-color: white; }
+
+.parallax #third {
+  background-image: url(../img/pic2.jpg);
+  height: 670px;
+  background-position: 50% 267px; }
+
+.parallax #fourth {
+  background-image: "";
+  height: 560px;
+  background-position: 50%;
+  background-color: white; }
+
+.parallax #fifth {
+  background-image: url(../img/pic3.jpg);
+  height: 670px;
+  background-position: 50% 267px; }
+
+.parallax #sixth {
+  background-image: "";
+  height: 560px;
+  background-position: 50%;
+  background-color: white; }
+
+.parallax .content {
+  padding-top: 200px;
+  padding-left: 100px; }
+
+.parallax .content span {
+  font-size: 102px;
+  line-height: 102px;
+  font-weight: 100;
+  color: #ffffff;
+  padding: 0px; }
+
+#second span, #fourth span, #sixth span {
+  color: #000; }
+
 /* 组件 */
 .navbar-default {
   border-color: #e7e7e7;
