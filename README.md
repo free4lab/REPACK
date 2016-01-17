@@ -24,7 +24,7 @@ free4lab new front
 
 Clone
 
-    git clone https://github.com/free4inno/Flexible-Front-Frameware.git
+    git clone https://github.com/free4lab/Flexible-Front-Frameware.git
     
 or
 
@@ -47,7 +47,7 @@ Install Node.js
 
 Clone 
 
-    git clone https://github.com/free4inno/Flexible-Front-Frameware.git
+    git clone https://github.com/free4lab/Flexible-Front-Frameware.git
 
 Switch to develop branch
 
