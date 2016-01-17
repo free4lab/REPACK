@@ -6,6 +6,7 @@ node_modules/
 
 # IDE
 .idea
+*.iml
 
 # TEMP
 src/dev/bootstrap
