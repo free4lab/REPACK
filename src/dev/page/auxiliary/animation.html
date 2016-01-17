@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Animation</title>
+  <link rel="stylesheet" href="/bootstrap/css/bootstrap.css" />
+  <link rel="stylesheet" href="/css/front.css" />
+  <link rel="stylesheet" href="/css/animate/animate.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="front-toolbar">
+      <div class="front-toolbar-header clearfix">
+        <button type="button" class="front-toolbar-toggle navbar-toggle" data-toggle="collapse" data-target="#freeshare">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div id="freeshare" class="front-btn-group collapse">
+        <a class="btn btn-default front-no-box-shadow">Button</a>
+        <a class="btn btn-default front-no-box-shadow">Button</a>
+        <a class="btn btn-default front-no-box-shadow">Button</a>
+        <a class="btn btn-default front-no-box-shadow">Button</a>
+      </div>
+    </div>
+    <div class="panel panel-default front-panel animated zoomIn">
+      <div class="panel-body front-news-panel">
+        <div class="media">
+          <div class="media-body">
+            <h4 class="media-heading front-text-break">Title</h4>
+            <p class="front-text-break">点击Button进行页面切换，可以看到转场动画效果。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="/js/jquery/jquery.min.js"></script>
+  <script>
+    $("#freeshare").find("a").click(function() {
+      if ($(".animated").hasClass("zoomIn")) {
+        $(".animated").removeClass("zoomIn");
+        $(".animated").addClass("zoomOut");
+        setTimeout(function() {
+          $(".animated").removeClass("zoomOut")
+        }, 500);
+        $(".animated").addClass("zoomIn");
+      }
+    });
+  </script>
+</body>
+</html>
