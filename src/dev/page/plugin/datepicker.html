@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DatePicker</title>
+  <link rel="stylesheet" href="/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="/css/front.css">
+  <link rel="stylesheet" href="/css/datepicker/ui/jquery-ui.min.css"/>
+  <link rel="stylesheet" href="/css/datepicker/ui/jquery-ui.structure.min.css"/>
+  <link rel="stylesheet" href="/css/datepicker/ui/jquery-ui.theme.min.css"/>
+</head>
+<body>
+  <h3>pick a date</h3>
+  <form class="form-inline">
+    <div class="form-group">
+      <label for="date">选择日期</label>
+      <input type="text" class="form-control" id="date" placeholder="date">
+    </div>
+  </form>
+  <h3>pick a date range</h3>
+  <form class="form-inline">
+    <div class="form-group">
+      <label for="start-date">起始日期</label>
+      <input type="text" class="form-control" id="start-date" placeholder="start date">
+    </div>
+    <div class="form-group">
+      <label for="end-date">结束日期</label>
+      <input type="text" class="form-control" id="end-date" placeholder="end date">
+    </div>
+  </form>
+  <script src="/js/jquery/jquery.min.js"></script>
+  <script src="/js/plugin/datepicker/ui/jquery-ui.min.js"></script>
+  <script src="/js/plugin/datepicker/ui/datepicker-zh-CN.js"></script>
+  <script>
+    $('#date').datepicker()
+
+    $( "#start-date" ).datepicker({
+      onClose: function( selectedDate ) {
+        $( "#end-date" ).datepicker( "option", "minDate", selectedDate );
+      }
+    });
+    $( "#end-date" ).datepicker({
+      onClose: function( selectedDate ) {
+        $( "#start-date" ).datepicker( "option", "maxDate", selectedDate );
+      }
+    });
+  </script>
+</body>
+</html>
