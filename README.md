@@ -1,30 +1,30 @@
-# FrontLab
+# Flexible-Front-Frameware
 free4lab new front
 
 ![FrontLab](http://ww4.sinaimg.cn/large/006hTL6Wjw1eyrbd6lqs9j313q0mnq5t.jpg)
 
 ## 示例 demo
-之前版本 previous version [http://newfront.free4lab.com/](http://newfront.free4lab.com/)
+之前版本 previous version [http://newfront.free4inno.com/](http://newfront.free4inno.com/)
 
-正在开发 developing version  [http://frontlab.free4lab.com/](http://frontlab.free4lab.com/)
+正在开发 developing version  [http://f3.free4lab.com/](http://f3.free4lab.com/)
 
 ## 快速使用 Quick Start Use
 ### 引用在线资源 reference online resources
 
     # CSS
-    <link rel="stylesheet" href="http://newfront.free4lab.com/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="http://newfront.free4lab.com/css/front.css">
+    <link rel="stylesheet" href="http://newfront.free4inno.com/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://newfront.free4inno.com/css/front.css">
     
     # JS
-    <script src="http://newfront.free4lab.com/js/jquery/jquery.min.js"></script>
-    <script src="http://newfront.free4lab.com/bootstrap/js/bootstrap.min.js"></script>
-    <script src="http://newfront.free4lab.com/js/plugin/front.js"></script>
+    <script src="http://newfront.free4inno.com/js/jquery/jquery.min.js"></script>
+    <script src="http://newfront.free4inno.com/bootstrap/js/bootstrap.min.js"></script>
+    <script src="http://newfront.free4inno.com/js/plugin/front.js"></script>
     
 ### 引用本地资源 reference local resources
 
 Clone
 
-    git clone https://github.com/free4lab/FrontLab.git
+    git clone https://github.com/free4lab/Flexible-Front-Frameware.git
     
 or
 
@@ -47,7 +47,7 @@ Install Node.js
 
 Clone 
 
-    git clone https://github.com/free4lab/FrontLab.git
+    git clone https://github.com/free4lab/Flexible-Front-Frameware.git
 
 Switch to develop branch
 
