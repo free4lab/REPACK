@@ -10,4 +10,4 @@ node_modules/
 # TEMP
 src/dev/bootstrap
 src/dev/js/common/front.js
-src/dev/css
+src/dev/css/front.css
