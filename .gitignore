@@ -6,3 +6,8 @@ node_modules/
 
 # IDE
 .idea
+
+# TEMP
+src/dev/bootstrap
+src/dev/js/common/front.js
+src/dev/css
