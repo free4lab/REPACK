@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>TipModal</title>
+  <link rel="stylesheet" href="/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="/css/front.css">
+</head>
+<body>
+  <div class="container">
+    <h3>TipModal Alert</h3>
+    <div class="btn-group btn-group-justified">
+      <div class="btn-group" role="group">
+        <button type="button" id="warning" class="btn btn-default">Warning Alert</button>
+      </div>
+      <div class="btn-group" role="group">
+        <button type="button" id="danger" class="btn btn-default">Danger Alert</button>
+      </div>
+      <div class="btn-group" role="group">
+        <button type="button" id="success" class="btn btn-default">Success Alert</button>
+      </div>
+      <div class="btn-group" role="group">
+        <button type="button" id="info" class="btn btn-default">Info Alert</button>
+      </div>
+    </div>
+    <h3>TipModal Confirm</h3>
+    <div class="btn-group btn-group-justified">
+      <div class="btn-group" role="group">
+        <button type="button" id="warning-c" class="btn btn-default">Warning Confirm</button>
+      </div>
+      <div class="btn-group" role="group">
+        <button type="button" id="danger-c" class="btn btn-default">Danger Confirm</button>
+      </div>
+      <div class="btn-group" role="group">
+        <button type="button" id="success-c" class="btn btn-default">Success Confirm</button>
+      </div>
+      <div class="btn-group" role="group">
+        <button type="button" id="info-c" class="btn btn-default">Info Confirm</button>
+      </div>
+    </div>
+  </div>
+  <script src="/js/jquery/jquery.min.js"></script>
+  <script src="/bootstrap/js/bootstrap.js"></script>
+  <script src="/js/common/bootbox.js"></script>
+  <script src="/js/common/tipmodal.js"></script>
+  <script>
+    $('#warning').click(function () {
+      $.tipModal('alert', 'warning', 'Warning信息')
+    })
+    $('#danger').click(function () {
+      $.tipModal('alert', 'danger', 'Danger信息')
+    })
+    $('#success').click(function () {
+      $.tipModal('alert', 'success', 'Success信息')
+    })
+    $('#info').click(function () {
+      $.tipModal('alert', 'info', 'Info信息')
+    })
+
+    $('#warning-c').click(function () {
+      $.tipModal('confirm', 'warning', 'Warning Confirm', function(result) {
+        console.log('ok warning callback: ' + result)
+      })
+    })
+    $('#danger-c').click(function () {
+      $.tipModal('confirm', 'danger', 'Danger Confirm', function(result) {
+        console.log('ok danger callback: ' + result)
+      })
+    })
+    $('#success-c').click(function () {
+      $.tipModal('confirm', 'success', 'Success Confirm', function(result) {
+        console.log('ok success callback: ' + result)
+      })
+    })
+    $('#info-c').click(function () {
+      $.tipModal('confirm', 'info', 'Info Confirm', function (result) {
+        console.log('ok info callback: ' + result)
+      })
+    })
+  </script>
+</body>
+</html>
