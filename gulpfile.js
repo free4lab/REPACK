@@ -131,6 +131,35 @@ gulp.task('dist:build', ['dev:build'], function () {
   // JQuery JS
   gulp.src(config.devDir + '/js/jquery/jquery.min.js')
       .pipe(gulp.dest(config.publicDir + '/js/jquery'));
+
+  // FileUpload JS
+  gulp.src(config.devDir + '/js/plugin/fileupload/fileupload.js')
+      .pipe(uglify())
+      .pipe(rename({suffix: '.min'}))
+      .pipe(gulp.dest(config.publicDir + '/js/plugin/fileupload'));
+
+  // Datepicker JS
+  gulp.src(config.devDir + '/js/plugin/datepicker/ui/datepicker-zh-CN.js')
+      .pipe(uglify())
+      .pipe(rename({suffix: '.min'}))
+      .pipe(gulp.dest(config.publicDir + '/js/plugin/datepicker'));
+
+  // Datepicker CSS
+  gulp.src(config.devDir + '/css/datepicker/ui/**/*')
+      .pipe(gulp.dest(config.publicDir + '/css/datepicker/ui/'));
+
+  gulp.src(config.devDir + '/js/plugin/datepicker/ui/jquery-ui.min.js')
+      .pipe(gulp.dest(config.publicDir + '/js/plugin/datepicker'));
+
+  // Gallery
+  gulp.src(config.devDir + '/js/plugin/gallery/**/*')
+      .pipe(gulp.dest(config.publicDir + '/js/plugin/gallery/'));
+
+  // Animate CSS
+  gulp.src(config.devDir + '/css/animate/animate.css')
+      .pipe(minifycss())
+      .pipe(rename({suffix: '.min'}))
+      .pipe(gulp.dest(config.publicDir + '/css/animate/'));
 });
 
 // Clean Dist
