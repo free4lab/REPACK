@@ -7,14 +7,23 @@
   <link rel="stylesheet" href="/css/front.css"/>
 </head>
 <body>
-  <ul class="pagination">
-    <li class="disabled"><a aria-label="Previous">&laquo;</a></li>
-    <li class="active"><a>1</a></li>
-    <li><a>2</a></li>
-    <li><a>3</a></li>
-    <li><a>4</a></li>
-    <li><a aria-label="PreMore">...</a></li>
-    <li class="disabled"><a aria-label="Next">&raquo;</a></li>
-  </ul>
+  <div class="text-center">
+    <ul class="pagination">
+      <li class="disabled"><a aria-label="Previous">&laquo;</a></li>
+      <li class="active"><a>1</a></li>
+      <li><a>2</a></li>
+      <li><a>3</a></li>
+      <li><a>4</a></li>
+      <li><a aria-label="PreMore">...</a></li>
+      <li class="disabled"><a aria-label="Next">&raquo;</a></li>
+    </ul>
+  </div>
+  <div id="divpage"></div>
 </body>
+<script src="/js/jquery/jquery.min.js"></script>
+<script src="/js/common/divPage.js"></script>
+<script>
+  var html = $.getDivPageHtml(1, 10, 'hello');
+  $('#divpage').html(html);
+</script>
 </html>
