@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>FileUpload</title>
+  <link rel="stylesheet" href="/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="/css/front.css">
+</head>
+<body>
+  <div class="container">
+    <h3>Link Style</h3>
+    <form id="link-demo" action="file_upload" method="post" class="fr-file-upload" enctype="multipart/form-data">
+      <input type="file" name="frFile"/>
+      <a href="#" data-trigger>[导入配置]</a>
+      <table data-file-info></table>
+    </form>
+    <h3>Button Style</h3>
+    <form id="btn-demo" action="file_upload" method="post" class="fr-file-upload" enctype="multipart/form-data">
+      <input type="file" name="frFile"/>
+      <a href="#" class="btn btn-default" data-trigger>导入配置</a>
+      <table data-file-info></table>
+    </form>
+  </div>
+  <script src="/js/jquery/jquery.min.js"></script>
+  <script src="/js/common/front.js"></script>
+  <script src="/js/plugin/fileupload/fileupload.js"></script>
+  <script>
+    $('#link-demo').frFileUpload({uploadCallback: function(data) {
+      console.log(data);
+    }});
+
+    $('#btn-demo').frFileUpload({uploadCallback: function(data) {
+      console.log(data);
+    }});
+  </script>
+</body>
+</html>
