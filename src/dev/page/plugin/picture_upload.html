@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>PictureUpload</title>
+  <link rel="stylesheet" href="/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="/css/front.css">
+</head>
+<body>
+  <div class="container">
+    <a id="upload-avatar" class="btn btn-default">上传图像</a>
+  </div>
+  <script src="/js/jquery/jquery.min.js"></script>
+  <script src="/bootstrap/js/bootstrap.js"></script>
+  <script src="/js/plugin/fileupload/fileupload.js"></script>
+  <script src="/js/common/imgupload.js"></script>
+  <script>
+    $('#upload-avatar').on('click', function() {
+      var uploadAvatarModal = new UploadAvatarModal({
+        title : '修改头像', // 模态框标题
+        name : 'photo', // <input type="file" name="photo">
+        uploadUrl : '', // 后端上传图像URL
+        dataUrl : 'http://freedisk.free4inno.com/download?uuid=', // 图像存储URL
+        dataSource : '8c8a0c14-d532-4e9c-9f0c-a34927218153|cfcb802e-94d7-4898-ab54-980e2dea6c80', // 系统图像UUID(以|分隔)
+        dataUUID : 'def240a2-9789-4edc-a4aa-5c8324d29895', // 默认图像UUID
+        retUUID : 'uuid' // 后端上传图像返回UUID的参数名
+      })
+
+      uploadAvatarModal.generate().on('avatar-upload.fr.modal.confirm', function() {
+        console.log(uploadAvatarModal.getUUID())
+      })
+    })
+  </script>
+</body>
+</html>
