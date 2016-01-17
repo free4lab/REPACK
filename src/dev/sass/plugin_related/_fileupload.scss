@@ -1,0 +1,7 @@
+/* 上传文件 */
+.fr-file-upload>input[type=file] {
+  opacity: 0;
+  z-index: 200;
+  position: absolute;
+  cursor: pointer;
+}
