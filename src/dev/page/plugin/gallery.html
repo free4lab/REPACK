@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gallery</title>
+  <link rel="stylesheet" href="/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="/css/front.css">
+  <link rel="stylesheet" href="/js/plugin/gallery/css/blueimp-gallery.css">
+  <link rel="stylesheet" href="/js/plugin/gallery/css/bootstrap-image-gallery.min.css">
+</head>
+<body>
+  <div class="col-md-12 clearfix front-about-pic">
+    <div class="col-xs-12 col-sm-6 col-md-3">
+      <div><a href="/img/avatar1.jpg" data-caption="<strong>徐鹏</strong><br/>开始的时候因为我的兴趣所以有了“自邮之翼”，慢慢的“自邮之翼”成了我的事业，认真培养第一流学生的同时，向着第一流的产品努力，何其之幸！开始的时候因为我的兴趣所以有了“自邮之翼”，慢慢的“自邮之翼”成了我的事业，认真培养第一流学生的同时，向着第一流的产品努力，何其之幸！开始的时候因为我的兴趣所以有了“自邮之翼”，慢慢的“自邮之翼”成了我的事业，认真培养第一流学生的同时，向着第一流的产品努力，何其之幸！"><img class="img-responsive" src="/img/avatar1.jpg" alt="Avatar"></a></div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-3">
+      <div><a href="/img/avatar2.jpg" data-caption="<strong>2014级全体成员</strong><br/>龚凌璞、李琛、黄哲思、宋鹏威、程航、赵正扬、何贵民、赵雪媛"><img class="img-responsive" src="/img/avatar2.jpg" alt="Avatar"></a></div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-3">
+      <div><a href="/img/avatar3.jpg"><img class="img-responsive" src="/img/avatar3.jpg" alt="Avatar"></a></div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-3">
+      <div><a href="/img/avatar4.jpg" data-caption="开始的时候因为我的兴趣所以有了“自邮之翼”，慢慢的“自邮之翼”成了我的事业，认真培养第一流学生的同时，向着第一流的产品努力，何其之幸！开始的时候因为我的兴趣所以有了“自邮之翼”，慢慢的“自邮之翼”成了我的事业，认真培养第一流学生的同时，向着第一流的产品努力，何其之幸！开始的时候因为我的兴趣所以有了“自邮之翼”，慢慢的“自邮之翼”成了我的事业，认真培养第一流学生的同时，向着第一流的产品努力，何其之幸！开始的时候因为我的兴趣所以有了“自邮之翼”，慢慢的“自邮之翼”成了我的事业，认真培养第一流学生的同时，向着第一流的产品努力，何其之幸！开始的时候因为我的兴趣所以有了“自邮之翼”，慢慢的“自邮之翼”成了我的事业，认真培养第一流学生的同时，向着第一流的产品努力，何其之幸！开始的时候因为我的兴趣所以有了“自邮之翼”，慢慢的“自邮之翼”成了我的事业，认真培养第一流学生的同时，向着第一流的产品努力，何其之幸！"><img class="img-responsive" src="/img/avatar4.jpg" alt="Avatar"></a></div>
+    </div>
+  </div>
+  <div id="blueimp-gallery" class="blueimp-gallery">
+    <!-- The container for the modal slides -->
+    <div class="slides"></div>
+    <div class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body next"></div>
+          <div class="caption"></div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default pull-left prev">
+              <i class="glyphicon glyphicon-chevron-left"></i>
+            </button>
+            <button type="button" class="btn btn-primary next">
+              <i class="glyphicon glyphicon-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="/js/jquery/jquery.min.js"></script>
+  <script src="/js/plugin/gallery/js/jquery.blueimp-gallery.min.js"></script>
+  <script src="/js/plugin/gallery/js/bootstrap-image-gallery.min.js"></script>
+  <script>
+    var $gallery = $('.front-about-pic')
+
+    $gallery.click(function(event) {
+      event = event || window.event;
+      var $target = $(event.target || event.srcElement),
+          links = $gallery.find('a'),
+          index = $target.is('a') ? links.index($target) : links.index($target.parent()),
+          options = {index: index, event: event, emulateTouchEvents: false, onslidecomplete: function(index, slide) {
+            var $slide = $(slide),
+                $modalDialog
+
+            // 图片文字介绍
+            $slide.find('.caption').css('width', $(slide).find('img').width())
+                .html(links.eq(index).data('caption'))
+
+            // 相册超出屏幕高度时
+            // 将slide的高度设置为相册高度
+            // 使得往上滑动的时候看以看到内容
+            $modalDialog = $(slide).find('.modal-dialog')
+
+            if ($modalDialog.outerHeight(true) > $(window).height()) {
+              $slide.css('height', $modalDialog.outerHeight(true))
+            }
+          }}
+
+      blueimp.Gallery(links, options)
+    })
+  </script>
+</body>
+</html>
