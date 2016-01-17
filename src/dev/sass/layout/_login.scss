@@ -1,5 +1,9 @@
+.front-brand-img {
+  height: 30px;
+  width: 132px;
+}
+
 .hero {
-  background-image: url("/img/login/login_big.png");
   background-position: center center;
   overflow: hidden;
   background-size: cover;
@@ -10,7 +14,6 @@
 }
 
 .hero-login {
-  background-image: url('/img/login/login_banner.png');
   background-position: center center;
   overflow: hidden;
   background-size: cover;
@@ -38,7 +41,7 @@ select.input-lg {
   line-height: 46px
 }
 
-select[multiple].input-lg, textarea.input-lg {
+select[multiple].input-lg,textarea.input-lg {
   height: auto
 }
 .front-remfield {
@@ -46,24 +49,24 @@ select[multiple].input-lg, textarea.input-lg {
   font-size: 18px;
   line-height: 1.3333333;
 }
-.front-login-hr {
+.front-login-hr{
   height: 1px;
   background-color: #ccc;
   margin: 30px 0;
 }
-.feature {
+.feature{
   padding-top: 5px;
   padding-bottom: 5px;
 }
-.navbar-login {
+.navbar-login{
   z-index:999;
 }
-.footer {
+.footer{
   background-color: #333;
   height: 160px;
   padding-top: 45px;
   margin-top: 100px;
 }
-.footer-copyright {
+.footer-copyright{
   color: #fff;
 }
