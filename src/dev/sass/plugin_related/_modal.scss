@@ -11,7 +11,7 @@
 .front-selected-area {
   border-top: 1px solid #ddd;
 }
-.front-tab-content{
+.front-tab-content {
   height:250px;
   overflow-y: auto;
   border-left:solid 1px #ddd;
@@ -110,18 +110,18 @@
   }
 }
 /*头部和底部*/
-.modal-header{
+.modal-header {
   background-color:#f5f5f5;
   border-top-left-radius:10px;
   border-top-right-radius:10px;
 }
-.modal-footer{
+.modal-footer {
   background-color:#f5f5f5;
   border-bottom-left-radius:10px;
   border-bottom-right-radius:10px;
 }
 /*图像*/
-.front-imgbox{
+.front-imgbox {
   float:left;
   width:70px;
   height:70px;
@@ -129,46 +129,45 @@
   cursor:pointer;
   border:solid 1px #eee;
 }
-.front-imgbox img{
+.front-imgbox img {
   width:68px;
   height:68px;
 }
-.front-imgbox-70{
+.front-imgbox-70 {
   float:left;
   width:70px;
   height:70px;
   margin:18px;
 }
-.front-imgbox-70 img{
+.front-imgbox-70 img {
   width:68px;
   height:68px;
   border:solid 1px #eee;
 }
-.front-imgbox-100{
+.front-imgbox-100 {
   float:left;
   width:100px;
   height:100px;
   margin:18px;
 }
 
-.front-imgbox-100 img{
+.front-imgbox-100 img {
   width:98px;
   height:98px;
   border:solid 1px #eee;
 }
 
-.front-imgbox-70 p,.front-imgbox-100 p{
+.front-imgbox-70 p, .front-imgbox-100 p {
   text-align:center;
 }
 
 
-#freeshare-diyImg{
+#freeshare-diyImg {
   text-align:center;
   padding:50px;
 }
 
-#freeshare-photo_1
-{
+#freeshare-photo_1 {
   width:110px;
   height:34px;
   margin-top:-34px;
@@ -178,9 +177,8 @@
   cursor:pointer;
 }
 /*复选框*/
-.checkbox_float_left{
-  float:left;
+.checkbox_float_left {
+  float: left;
   width: 48%;
   padding-left: 3%;
-
 }
