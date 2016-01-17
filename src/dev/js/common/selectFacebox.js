@@ -46,6 +46,8 @@
         $modal.on('hidden.bs.modal', function () { // when the modal close remove it
             $modal.remove()
         })
+
+        return $modal;
     }
    
     // modal api
@@ -64,7 +66,7 @@
 
         var params = $.extend(preSetParams, option);
 
-        createModal(params.size, params.title, params.href);
+        return createModal(params.size, params.title, params.href);
     };
 
     // 选择浮层
