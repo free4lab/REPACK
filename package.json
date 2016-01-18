@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zrss/Front.git"
+    "url": "git+https://github.com/free4lab/Flexible-Front-Frameware.git"
   },
   "author": "free4lab",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/zrss/Front/issues"
+    "url": "https://github.com/free4lab/Flexible-Front-Frameware/issues"
   },
-  "homepage": "https://github.com/zrss/Front#readme",
+  "homepage": "https://github.com/free4lab/Flexible-Front-Frameware#readme",
   "devDependencies": {
     "bootstrap-sass": "^3.3.5",
     "browser-sync": "^2.9.11",
