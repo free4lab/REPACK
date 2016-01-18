@@ -653,6 +653,9 @@ if (typeof jQuery === 'undefined') {
         .removeClass('collapsing')
         .addClass('collapse')
         .trigger('hidden.bs.collapse')
+
+      //去掉样式'height:0',不然会有回到大分辨率后元素向下偏移的问题。
+      this.$element.removeAttr('style');
     }
 
     if (!$.support.transition) return complete.call(this)
@@ -926,6 +929,7 @@ if (typeof jQuery === 'undefined') {
   var Modal = function (element, options) {
     this.options             = options
     this.$body               = $(document.body)
+    this.$html               = $(document.documentElement)
     this.$element            = $(element)
     this.$dialog             = this.$element.find('.modal-dialog')
     this.$backdrop           = null
@@ -970,7 +974,7 @@ if (typeof jQuery === 'undefined') {
 
     this.checkScrollbar()
     this.setScrollbar()
-    this.$body.addClass('modal-open')
+    this.$html.addClass('modal-open')
 
     this.escape()
     this.resize()
@@ -986,9 +990,9 @@ if (typeof jQuery === 'undefined') {
     this.backdrop(function () {
       var transition = $.support.transition && that.$element.hasClass('fade')
 
-      if (!that.$element.parent().length) {
+      //if (!that.$element.parent().length) {
         that.$element.appendTo(that.$body) // don't move modals dom position
-      }
+      //}
 
       that.$element
         .show()
@@ -1078,7 +1082,7 @@ if (typeof jQuery === 'undefined') {
     var that = this
     this.$element.hide()
     this.backdrop(function () {
-      that.$body.removeClass('modal-open')
+      that.$html.removeClass('modal-open')
       that.resetAdjustments()
       that.resetScrollbar()
       that.$element.trigger('hidden.bs.modal')
@@ -1214,6 +1218,20 @@ if (typeof jQuery === 'undefined') {
   $.fn.modal             = Plugin
   $.fn.modal.Constructor = Modal
 
+  // 模态框不能滚动
+  var fixedCls = '.navbar-fixed-top,.navbar-fixed-bottom';
+  var oldSSB = $.fn.modal.Constructor.prototype.setScrollbar;
+  $.fn.modal.Constructor.prototype.setScrollbar = function () {
+    oldSSB.apply(this);
+    if (this.bodyIsOverflowing && this.scrollbarWidth)
+      $(fixedCls).css('padding-right', this.scrollbarWidth);
+  }
+
+  var oldRSB = $.fn.modal.Constructor.prototype.resetScrollbar;
+  $.fn.modal.Constructor.prototype.resetScrollbar = function () {
+    oldRSB.apply(this);
+    $(fixedCls).css('padding-right', '');
+  }
 
   // MODAL NO CONFLICT
   // =================
