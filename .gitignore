@@ -9,6 +9,6 @@ node_modules/
 *.iml
 
 # TEMP
-src/dev/bootstrap
+/src/dev/bootstrap/fonts/*
 src/dev/js/common/front.js
 src/dev/css/front.css
