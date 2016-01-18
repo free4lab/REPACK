@@ -69,10 +69,6 @@ gulp.task('dist:frontcss', ['dev:frontcss'], function () {
 
 // Dev JS
 gulp.task('dev:js', function () {
-  // Bootstrap JS
-  gulp.src(config.bootstrapDir + '/assets/javascripts/bootstrap.js')
-      .pipe(gulp.dest(config.devDir + '/bootstrap/js'));
-
   // Front JS
   gulp.src([config.devDir + '/js/common/*.js', '!' + config.devDir + '/js/common/front.js'])
       .pipe(concat('front.js'))
