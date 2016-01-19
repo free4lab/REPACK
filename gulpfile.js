@@ -156,6 +156,10 @@ gulp.task('dist:build', ['dev:build'], function () {
       .pipe(minifycss())
       .pipe(rename({suffix: '.min'}))
       .pipe(gulp.dest(config.publicDir + '/css/animate/'));
+
+  // Bootstrap DatetimePicker
+  gulp.src(config.devDir + '/js/plugin/bootstrap-datetimepicker/build/**/*')
+      .pipe(gulp.dest(config.publicDir + '/js/plugin/bootstrap-datetimepicker'));
 });
 
 // Clean Dist

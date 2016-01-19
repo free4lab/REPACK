@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Bootstrap DatetimePicker</title>
+  <link rel="stylesheet" href="/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="/css/front.css">
+  <link rel="stylesheet" href="/js/plugin/bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css">
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class='col-sm-2'>
+        <input type='text' class="form-control" id='datetimepicker' />
+      </div>
+    </div>
+  </div>
+  <script src="/js/jquery/jquery.min.js"></script>
+  <script src="/bootstrap/js/bootstrap.js"></script>
+  <script src="/js/plugin/moment/moment.min.js"></script>
+  <script src="/js/plugin/moment/locales.min.js"></script>
+  <script src="/js/plugin/bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+  <script>
+    $(function () {
+      $('#datetimepicker').datetimepicker({
+        locale: 'zh-cn',
+        format: 'YYYY/MM/DD HH:mm:ss',
+        sideBySide: true
+      });
+    });
+  </script>
+</body>
+</html>
