@@ -49,16 +49,17 @@
       var clip = new ZeroClipboard(linkCopy, {
         'moviePath': moviePath
       });
-      clip.on('dataRequested', function (c,a) {
+
+      clip.on('copy', function (e) {
         // Workaround for their singleton pattern (see issue zeroclipboard/ZeroClipboard#90)
-        if(this.parentNode.parentNode.getElementsByTagName('code')[0])
-          clip.setText(this.parentNode.parentNode.getElementsByTagName('code')[0].innerText);
+        if(e.target.parentNode.parentNode.getElementsByTagName('code')[0])
+          clip.setText(e.target.parentNode.parentNode.getElementsByTagName('code')[0].innerText);
       });
-      clip.on('complete', function(c,a) {
+      clip.on('aftercopy', function(e) {
         // Workaround for their singleton pattern (see issue zeroclipboard/ZeroClipboard#90)
-        var message = this.parentNode.parentNode.getAttribute('data-copy-success');
+        var message = e.target.parentNode.parentNode.getAttribute('data-copy-success');
         if(message) {
-          alert(this.parentNode.parentNode.getAttribute('data-copy-success'));
+          alert(e.target.parentNode.parentNode.getAttribute('data-copy-success'));
         } else if(message == null) {
           alert('Code copied succesfully');
         }
