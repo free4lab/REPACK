@@ -53,6 +53,11 @@ gulp.task('dist:fonts', function () {
 
 // Dev Front CSS
 gulp.task('dev:frontcss', function () {
+  gulp.src(config.devDir + '/sass/doc.scss')
+      .pipe(sass())
+      .pipe(autoprefixer())
+      .pipe(gulp.dest(config.devDir + '/css'));
+
   return gulp.src(config.devDir + '/sass/front.scss')
       .pipe(sass())
       .pipe(autoprefixer())
