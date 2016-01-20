@@ -29,8 +29,12 @@
     linkSource.innerHTML = 'View source';
     attachClickHandler(linkSource, function( ) {
       var newWindow = window.open('', 'Source Code', 'chrome,resizable,scrollbars,centerscreen,width=800,height=600');
+      var strCode = this.code;
       newWindow.document.open();
-      newWindow.document.write('<!doctype html><html><head><title>Source Code</title></head><body><pre><code>' + this.code + '</code></pre></body></html>');
+      if (this.language == 'html') {
+        strCode = htmlEncode(this.code);
+      }
+      newWindow.document.write('<!doctype html><html><head><title>Source Code</title></head><body><pre><code>' + strCode + '</code></pre></body></html>');
       newWindow.document.close();
       return false;
     }, env);
@@ -74,5 +78,12 @@
     } else if(element.attachEvent) {
       element.attachEvent('onclick',  function() { callback.apply(that) });
     }
+  }
+
+  // Html Encode
+  function htmlEncode(str) {
+    var div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
   }
 })();
