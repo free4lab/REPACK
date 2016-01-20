@@ -134,30 +134,30 @@ gulp.task('dist:build', ['dev:build'], function () {
       .pipe(gulp.dest(config.publicDir + '/js/jquery'));
 
   // FileUpload JS
-  gulp.src(config.devDir + '/js/plugin/fileupload/fileupload.js')
+  gulp.src(config.devDir + '/plugin/fileupload/fileupload.js')
       .pipe(uglify())
       .pipe(rename({suffix: '.min'}))
-      .pipe(gulp.dest(config.publicDir + '/js/plugin/fileupload'));
+      .pipe(gulp.dest(config.publicDir + '/plugin/fileupload'));
 
   // Datepicker JS
-  gulp.src(config.devDir + '/js/plugin/datepicker/ui/datepicker-zh-CN.js')
+  gulp.src(config.devDir + '/plugin/datepicker/ui/datepicker-zh-CN.js')
       .pipe(uglify())
       .pipe(rename({suffix: '.min'}))
-      .pipe(gulp.dest(config.publicDir + '/js/plugin/datepicker'));
+      .pipe(gulp.dest(config.publicDir + '/plugin/datepicker'));
 
   // Datepicker CSS
   gulp.src(config.devDir + '/css/datepicker/ui/**/*')
       .pipe(gulp.dest(config.publicDir + '/css/datepicker/ui/'));
 
-  gulp.src(config.devDir + '/js/plugin/datepicker/ui/jquery-ui.min.js')
-      .pipe(gulp.dest(config.publicDir + '/js/plugin/datepicker'));
+  gulp.src(config.devDir + '/plugin/datepicker/ui/jquery-ui.min.js')
+      .pipe(gulp.dest(config.publicDir + '/plugin/datepicker'));
 
   // Gallery
-  gulp.src(config.devDir + '/js/plugin/gallery/**/*')
+  gulp.src(config.devDir + '/plugin/gallery/**/*')
       .pipe(gulp.dest(config.publicDir + '/js/plugin/gallery/'));
 
-  gulp.src(config.devDir + '/js/plugin/gallery/img/*')
-      .pipe(gulp.dest(config.publicDir + '/js/plugin/gallery/img/'));
+  gulp.src(config.devDir + '/plugin/gallery/img/*')
+      .pipe(gulp.dest(config.publicDir + '/plugin/gallery/img/'));
 
   // Animate CSS
   gulp.src(config.devDir + '/css/animate/animate.css')
@@ -166,49 +166,49 @@ gulp.task('dist:build', ['dev:build'], function () {
       .pipe(gulp.dest(config.publicDir + '/css/animate/'));
 
   // Bootstrap DatetimePicker
-  gulp.src(config.devDir + '/js/plugin/bootstrap-datetimepicker/build/**/*')
-      .pipe(gulp.dest(config.publicDir + '/js/plugin/bootstrap-datetimepicker'));
+  gulp.src(config.devDir + '/plugin/bootstrap-datetimepicker/build/**/*')
+      .pipe(gulp.dest(config.publicDir + '/plugin/bootstrap-datetimepicker'));
 
   // Moment
-  gulp.src(config.devDir + '/js/plugin/moment/*')
-      .pipe(gulp.dest(config.publicDir + '/js/plugin/moment/'));
+  gulp.src(config.devDir + '/plugin/moment/*')
+      .pipe(gulp.dest(config.publicDir + '/plugin/moment/'));
 
   // prismjs
-  gulp.src(config.devDir + '/js/plugin/prismjs/css/*')
+  gulp.src(config.devDir + '/plugin/prismjs/css/*')
       .pipe(minifycss())
       .pipe(rename({suffix: '.min'}))
-      .pipe(gulp.dest(config.publicDir + '/js/plugin/prismjs/css/'));
+      .pipe(gulp.dest(config.publicDir + '/plugin/prismjs/css/'));
 
-  gulp.src(config.devDir + '/js/plugin/prismjs/js/prism.min.js')
-      .pipe(gulp.dest(config.publicDir + '/js/plugin/prismjs/js/'));
+  gulp.src(config.devDir + '/plugin/prismjs/js/prism.min.js')
+      .pipe(gulp.dest(config.publicDir + '/plugin/prismjs/js/'));
 
-  gulp.src(config.devDir + '/js/plugin/prismjs/js/toolbar.js')
+  gulp.src(config.devDir + '/plugin/prismjs/js/toolbar.js')
       .pipe(uglify())
       .pipe(rename({suffix: '.min'}))
-      .pipe(gulp.dest(config.publicDir + '/js/plugin/prismjs/js/'));
+      .pipe(gulp.dest(config.publicDir + '/plugin/prismjs/js/'));
 
   // zeroClipboard
-  gulp.src(config.devDir + '/js/plugin/zeroClipboard/*')
+  gulp.src(config.devDir + '/plugin/zeroClipboard/*')
       .pipe(gulp.dest(config.publicDir + '/js/plugin/zeroClipboard/'));
 
-  gulp.src(config.devDir + '/js/plugin/zeroClipboard/ZeroClipboard.swf')
-      .pipe(gulp.dest(config.publicDir + '/js/plugin/zeroClipboard/'));
+  gulp.src(config.devDir + '/plugin/zeroClipboard/ZeroClipboard.swf')
+      .pipe(gulp.dest(config.publicDir + '/plugin/zeroClipboard/'));
 
   // zTree
-  gulp.src([config.devDir + '/js/plugin/zTree/**/*',
-            '!' + config.devDir + '/js/plugin/zTree/css/zTreeStyle.css',
-            '!' + config.devDir + '/js/plugin/zTree/js/jquery.ztree.core-3.5.js'])
-      .pipe(gulp.dest(config.publicDir + '/js/plugin/zTree/'));
+  gulp.src([config.devDir + '/plugin/zTree/**/*',
+            '!' + config.devDir + '/plugin/zTree/css/zTreeStyle.css',
+            '!' + config.devDir + '/plugin/zTree/js/jquery.ztree.core-3.5.js'])
+      .pipe(gulp.dest(config.publicDir + '/plugin/zTree/'));
 
-  gulp.src(config.devDir + '/js/plugin/zTree/css/zTreeStyle.css')
+  gulp.src(config.devDir + '/plugin/zTree/css/zTreeStyle.css')
       .pipe(minifycss())
       .pipe(rename({suffix: '.min'}))
-      .pipe(gulp.dest(config.publicDir + '/js/plugin/zTree/css/'));
+      .pipe(gulp.dest(config.publicDir + '/plugin/zTree/css/'));
 
-  gulp.src(config.devDir + '/js/plugin/zTree/js/jquery.ztree.core-3.5.js')
+  gulp.src(config.devDir + '/plugin/zTree/js/jquery.ztree.core-3.5.js')
       .pipe(uglify())
       .pipe(rename({suffix: '.min'}))
-      .pipe(gulp.dest(config.publicDir + '/js/plugin/zTree/js/'));
+      .pipe(gulp.dest(config.publicDir + '/plugin/zTree/js/'));
 });
 
 // Clean Dist
