@@ -11,4 +11,4 @@ node_modules/
 # TEMP
 /src/dev/bootstrap/fonts/*
 src/dev/js/common/front.js
-src/dev/css/front.css
+src/dev/css/*.css
