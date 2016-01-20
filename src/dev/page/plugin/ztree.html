@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>zTree</title>
+  <link rel="stylesheet" href="/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="/css/front.css">
+  <link rel="stylesheet" href="/js/plugin/zTree/css/zTreeStyle.css">
+  <link rel="stylesheet" href="/js/plugin/prismjs/css/prism.css">
+  <link rel="stylesheet" href="/js/plugin/prismjs/css/toolbar.css">
+</head>
+<body>
+  <div class="container">
+    <h3>zTree document</h3>
+    <blockquote><a href="http://www.ztree.me/v3/main.php#_zTreeInfo" title="zTreeDoc" target="_blank">http://www.ztree.me/v3/main.php#_zTreeInfo</a></blockquote>
+    <h3>Demo</h3>
+    <ul id="tree-demo" class="ztree"></ul>
+    <h3>Demo Code</h3>
+    <pre class="line-numbers code-toolbar keep-initial-line-feed"><code class="language-javascript">
+var zNodes = [
+  {
+    name: '父节点1', children: [{name: '子节点1.1'}, {name: '子节点1.2'}]
+  },
+  {
+    name: '父节点2 - 展开', open: true, children: [{name: '子节点2.1'}, {name: '子节点2.2'}]
+  },
+  {
+    name: '父节点3 - 没有子节点', isParent: true
+  },
+  {
+    name: '同级节点'
+  }
+]
+
+$.fn.zTree.init($('#tree-demo'), {}, zNodes)</code></pre>
+    <h3>Resource Reference</h3>
+    <h4>CSS</h4>
+    <pre class="line-numbers"><code class="language-html">
+&lt;link rel=&quot;stylesheet&quot; href=&quot;/js/plugin/zTree/css/zTreeStyle.css&quot;&gt;</code></pre>
+    <h4>JS</h4>
+    <pre class="line-numbers"><code class="language-html">
+&lt;script src=&quot;/js/plugin/zTree/js/jquery.ztree.core-3.5.js&quot;&gt;&lt;/script&gt;</code></pre>
+  </div>
+  <script src="/js/jquery/jquery.min.js"></script>
+  <script src="/js/plugin/zTree/js/jquery.ztree.core-3.5.js"></script>
+  <script src="/js/plugin/prismjs/js/prism.min.js"></script>
+  <script src="/js/plugin/prismjs/js/toolbar.js"></script>
+  <script src="/js/plugin/zeroClipboard/ZeroClipboard.min.js"></script>
+  <script>
+    var zNodes = [
+      {
+        name: '父节点1', children: [{name: '子节点1.1'}, {name: '子节点1.2'}]
+      },
+      {
+        name: '父节点2 - 展开', open: true, children: [{name: '子节点2.1'}, {name: '子节点2.2'}]
+      },
+      {
+        name: '父节点3 - 没有子节点', isParent: true
+      },
+      {
+        name: '同级节点'
+      }
+    ]
+
+    $.fn.zTree.init($('#tree-demo'), {}, zNodes);
+  </script>
+</body>
+</html>
