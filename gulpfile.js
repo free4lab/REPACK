@@ -154,12 +154,12 @@ gulp.task('dist:build', ['dev:build'], function () {
 
   // Gallery
   gulp.src([config.devDir + '/plugin/gallery/**/*', '!' + config.devDir + '/plugin/gallery/css/blueimp-gallery.min.css'])
-      .pipe(gulp.dest(config.publicDir + '/js/plugin/gallery/'));
+      .pipe(gulp.dest(config.publicDir + '/plugin/gallery/'));
 
   gulp.src(config.devDir + '/plugin/gallery/css/blueimp-gallery.css')
       .pipe(minifycss())
       .pipe(rename({suffix: '.min'}))
-      .pipe(gulp.dest(config.publicDir + '/js/plugin/gallery/css/'));
+      .pipe(gulp.dest(config.publicDir + '/plugin/gallery/css/'));
 
   // Animate CSS
   gulp.src(config.devDir + '/css/animate/animate.css')
