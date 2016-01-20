@@ -156,6 +156,9 @@ gulp.task('dist:build', ['dev:build'], function () {
   gulp.src(config.devDir + '/js/plugin/gallery/**/*')
       .pipe(gulp.dest(config.publicDir + '/js/plugin/gallery/'));
 
+  gulp.src(config.devDir + '/js/plugin/gallery/img/*')
+      .pipe(gulp.dest(config.publicDir + '/js/plugin/gallery/img/'));
+
   // Animate CSS
   gulp.src(config.devDir + '/css/animate/animate.css')
       .pipe(minifycss())
@@ -165,6 +168,47 @@ gulp.task('dist:build', ['dev:build'], function () {
   // Bootstrap DatetimePicker
   gulp.src(config.devDir + '/js/plugin/bootstrap-datetimepicker/build/**/*')
       .pipe(gulp.dest(config.publicDir + '/js/plugin/bootstrap-datetimepicker'));
+
+  // Moment
+  gulp.src(config.devDir + '/js/plugin/moment/*')
+      .pipe(gulp.dest(config.publicDir + '/js/plugin/moment/'));
+
+  // prismjs
+  gulp.src(config.devDir + '/js/plugin/prismjs/css/*')
+      .pipe(minifycss())
+      .pipe(rename({suffix: '.min'}))
+      .pipe(gulp.dest(config.publicDir + '/js/plugin/prismjs/css/'));
+
+  gulp.src(config.devDir + '/js/plugin/prismjs/js/prism.min.js')
+      .pipe(gulp.dest(config.publicDir + '/js/plugin/prismjs/js/'));
+
+  gulp.src(config.devDir + '/js/plugin/prismjs/js/toolbar.js')
+      .pipe(uglify())
+      .pipe(rename({suffix: '.min'}))
+      .pipe(gulp.dest(config.publicDir + '/js/plugin/prismjs/js/'));
+
+  // zeroClipboard
+  gulp.src(config.devDir + '/js/plugin/zeroClipboard/*')
+      .pipe(gulp.dest(config.publicDir + '/js/plugin/zeroClipboard/'));
+
+  gulp.src(config.devDir + '/js/plugin/zeroClipboard/ZeroClipboard.swf')
+      .pipe(gulp.dest(config.publicDir + '/js/plugin/zeroClipboard/'));
+
+  // zTree
+  gulp.src([config.devDir + '/js/plugin/zTree/**/*',
+            '!' + config.devDir + '/js/plugin/zTree/css/zTreeStyle.css',
+            '!' + config.devDir + '/js/plugin/zTree/js/jquery.ztree.core-3.5.js'])
+      .pipe(gulp.dest(config.publicDir + '/js/plugin/zTree/'));
+
+  gulp.src(config.devDir + '/js/plugin/zTree/css/zTreeStyle.css')
+      .pipe(minifycss())
+      .pipe(rename({suffix: '.min'}))
+      .pipe(gulp.dest(config.publicDir + '/js/plugin/zTree/css/'));
+
+  gulp.src(config.devDir + '/js/plugin/zTree/js/jquery.ztree.core-3.5.js')
+      .pipe(uglify())
+      .pipe(rename({suffix: '.min'}))
+      .pipe(gulp.dest(config.publicDir + '/js/plugin/zTree/js/'));
 });
 
 // Clean Dist
