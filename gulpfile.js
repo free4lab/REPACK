@@ -191,7 +191,7 @@ gulp.task('dist:build', ['dev:build'], function () {
 
   // zeroClipboard
   gulp.src(config.devDir + '/plugin/zeroClipboard/*')
-      .pipe(gulp.dest(config.publicDir + '/js/plugin/zeroClipboard/'));
+      .pipe(gulp.dest(config.publicDir + '/plugin/zeroClipboard/'));
 
   gulp.src(config.devDir + '/plugin/zeroClipboard/ZeroClipboard.swf')
       .pipe(gulp.dest(config.publicDir + '/plugin/zeroClipboard/'));
