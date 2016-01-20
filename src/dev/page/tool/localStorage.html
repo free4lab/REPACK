@@ -5,24 +5,27 @@
   <title>LocalStorage</title>
   <link rel="stylesheet" href="/bootstrap/css/bootstrap.css">
   <link rel="stylesheet" href="/css/front.css">
+  <link rel="stylesheet" href="/js/plugin/prismjs/css/prism.css">
 </head>
 <body>
   <div class="container">
-    <pre>
-//获取某一项LocalStorage的值；
-LocalStorage.getItem(key);
+    <h3>Usage</h3>
+    <pre><code class="language-javascript">
+//获取某一项LocalStorage的值
+LocalStorage.getItem(key)
 
-//设置某一项LocalStorage的值；
-LocalStorage.setItem(key,value);
+//设置某一项LocalStorage的值
+LocalStorage.setItem(key, value)
 
-//移除某一项LocalStorage的值；
-LocalStorage.removeItem(key,value);
+//移除某一项LocalStorage的值
+LocalStorage.removeItem(key, value)
 
-//清空LocalStorage；
-LocalStorage.clear();
+//清空LocalStorage
+LocalStorage.clear()
 
-//监视某一项LocalStorage值的变化；
-LocalStorage.onstorage(key,callback);</pre>
+//监视某一项LocalStorage值的变化
+LocalStorage.onstorage(key, callback)</code></pre>
   </div>
+  <script src="/js/plugin/prismjs/js/prism.min.js"></script>
 </body>
 </html>
