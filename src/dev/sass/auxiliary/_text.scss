@@ -5,3 +5,9 @@
   -o-text-overflow: ellipsis;
   overflow: hidden;
 }
+
+/* 禁止选中  */
+.noselect {
+  -webkit-touch-callout: none;
+  user-select: none;
+}
