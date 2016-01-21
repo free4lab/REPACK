@@ -8,6 +8,7 @@ var minifycss = require('gulp-minify-css');
 var del = require('del');
 var uglify = require('gulp-uglify');
 var runSequence = require('run-sequence');
+var order = require('gulp-order');
 
 // Path config
 var config = {
@@ -76,6 +77,10 @@ gulp.task('dist:frontcss', ['dev:frontcss'], function () {
 gulp.task('dev:js', function () {
   // Front JS
   gulp.src([config.devDir + '/js/common/*.js', '!' + config.devDir + '/js/common/front.js'])
+      .pipe(order([
+        'configure.js',
+        '*.js'
+      ]))
       .pipe(concat('front.js'))
       .pipe(gulp.dest(config.devDir + '/js/common'));
 });
