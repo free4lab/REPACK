@@ -6,13 +6,39 @@
   <link rel="stylesheet" href="/bootstrap/css/bootstrap.css">
   <link rel="stylesheet" href="/css/front.css">
   <link rel="stylesheet" href="/plugin/bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css">
+  <link rel="stylesheet" href="/plugin/prismjs/css/prism.css">
 </head>
 <body>
   <div class="container">
     <div class="row">
+      <h3>Bootstrap Datetimepicker Document</h3>
+      <blockquote><a href="https://eonasdan.github.io/bootstrap-datetimepicker/" title="DatetimePicker" target="_blank">https://eonasdan.github.io/bootstrap-datetimepicker/</a></blockquote>
+      <h3>Demo</h3>
       <div class='col-sm-2'>
         <input type='text' class="form-control" id='datetimepicker' />
       </div>
+      <div class="clearfix"></div>
+      <h3>HTML</h3>
+      <pre class="line-numbers"><code class="language-html">
+&lt;div class='col-sm-2'&gt;
+  &lt;input type='text' class="form-control" id='datetimepicker' /&gt;
+&lt;/div&gt;</code></pre>
+      <h3>JS</h3>
+      <pre class="line-numbers"><code class="language-javascript">
+$('#datetimepicker').datetimepicker({
+  locale: 'zh-cn',
+  format: 'YYYY/MM/DD HH:mm:ss',
+  sideBySide: true
+})</code></pre>
+      <h3>Resource Reference</h3>
+      <h4>CSS</h4>
+      <pre class="line-numbers"><code class="language-html">
+&lt;link rel="stylesheet" href="/plugin/bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css"&gt;</code></pre>
+      <h4>JS</h4>
+      <pre class="line-numbers"><code class="language-html">
+&lt;script src=&quot;/plugin/moment/moment.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;/plugin/moment/locales.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;/plugin/bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js&quot;&gt;&lt;/script&gt;</code></pre>
     </div>
   </div>
   <script src="/js/jquery/jquery.min.js"></script>
@@ -20,6 +46,7 @@
   <script src="/plugin/moment/moment.min.js"></script>
   <script src="/plugin/moment/locales.min.js"></script>
   <script src="/plugin/bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+  <script src="/plugin/prismjs/js/prism.min.js"></script>
   <script>
     $(function () {
       $('#datetimepicker').datetimepicker({
