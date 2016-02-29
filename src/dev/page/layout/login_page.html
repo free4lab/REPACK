@@ -7,43 +7,46 @@
   <link rel="stylesheet" href="/css/front.css">
 </head>
 <body>
-<div class="jumbotron hero-login">
-  <div class="container text-center">
-    <a><img src="/img/login_logo.png"></a>
-    <h4 style="color: #fff">用一个账号访问我们所有的服务</h4>
+<div class="front-login-inner">
+  <div class="jumbotron hero-login">
+    <div class="container text-center">
+      <a><img src="/img/login_logo.png"></a>
+      <h4 style="color: #fff">用一个账号访问我们所有的服务</h4>
+    </div>
   </div>
-</div>
-<div class="container">
-  <div class="row">
-    <form >
-      <div class="col-md-offset-4 col-md-4" >
-        <div class="form-group">
-          <input type="email" name="email"   class="form-control input-lg" value="" placeholder="邮箱"/>
-        </div>
-        <div class="form-group">
-          <input type="password" name="epsw" class="form-control input-lg" value=""  placeholder="密码"/>
-        </div>
-        <div class="form-group">
-          <button type="submit" class="btn btn-info btn-block btn-lg">登录</button>
-        </div>
-        <div class="form-group clearfix text-center">
-          <div class="checkbox front-remfield">
-            <label><input type="checkbox">记住此用户名</label>
+  <div class="container">
+    <div class="row">
+      <form>
+        <div class="col-md-offset-4 col-md-4" >
+          <div class="form-group">
+            <input type="email" name="email" class="form-control input-lg" placeholder="邮箱"/>
+          </div>
+          <div class="form-group">
+            <input type="password" name="epsw" class="form-control input-lg" placeholder="密码"/>
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-info btn-block btn-lg">登录</button>
+          </div>
+          <div class="form-group clearfix text-center">
+            <div class="checkbox front-remfield">
+              <label><input type="checkbox">记住此用户名</label>
+            </div>
+          </div>
+          <div class="front-login-hr"></div>
+          <div class="form-group">
+            <input type="button" class="btn btn-default btn-block btn-lg free_reg" style="border: 1px solid #5bc0de;color: #5bc0de" value="还没有账号？免费注册" >
+          </div>
+          <div class="form-group">
+            <input type="button" class="btn btn-default btn-block btn-lg" style="color: #ccc" value="忘记密码？找回" >
           </div>
         </div>
-        <div class="front-login-hr"></div>
-        <div class="form-group">
-          <input type="button" class="btn btn-default btn-block btn-lg free_reg" style="border: 1px solid #5bc0de;color: #5bc0de" value="还没有账号？免费注册" >
-        </div>
-        <div class="form-group">
-          <input type="button" class="btn btn-default btn-block btn-lg" style="color: #ccc" value="忘记密码？找回" >
-        </div>
-      </div>
-    </form>
+      </form>
+    </div>
   </div>
+  <div class="front-push"></div>
 </div>
-<footer class="footer-default">
-  <div class="text-center">Copyright © All Right Reserved by BUPT(2015)</div>
+<footer class="footer-login text-center">
+  <div>Copyright © All Right Reserved by BUPT(2015)</div>
 </footer>
 </body>
 </html>
