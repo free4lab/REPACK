@@ -6,7 +6,7 @@ free4lab new front
 ## 示例 demo
 之前版本 previous version [http://newfront.free4inno.com/](http://newfront.free4inno.com/)
 
-正在开发 developing version  [http://f3.free4lab.com/](http://f3.free4lab.com/)
+正在开发 developing version  [http://f3.free4inno.com/](http://f3.free4inno.com/)
 
 ## 快速使用 Quick Start Use
 ### 引用在线资源 reference online resources
