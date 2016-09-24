@@ -143,19 +143,23 @@ gulp.task('dist:build', ['dev:build'], function () {
       .pipe(uglify())
       .pipe(rename({suffix: '.min'}))
       .pipe(gulp.dest(config.publicDir + '/plugin/fileupload'));
+ 
+ //ImgUpload JS
+  gulp.src(config.devDir + '/plugin/imgupload/imgupload.js')
+      .pipe(gulp.dest(config.publicDir + '/plugin/imgupload'));
 
   // Datepicker JS
-  gulp.src(config.devDir + '/plugin/datepicker/ui/datepicker-zh-CN.js')
+  gulp.src(config.devDir + '/plugin/datepicker/ui/js/datepicker-zh-CN.js')
       .pipe(uglify())
       .pipe(rename({suffix: '.min'}))
-      .pipe(gulp.dest(config.publicDir + '/plugin/datepicker'));
+      .pipe(gulp.dest(config.publicDir + '/plugin/datepicker/js'));
 
   // Datepicker CSS
-  gulp.src(config.devDir + '/css/datepicker/ui/**/*')
-      .pipe(gulp.dest(config.publicDir + '/css/datepicker/ui/'));
+  gulp.src(config.devDir + '/plugin/datepicker/ui/css/*')
+      .pipe(gulp.dest(config.publicDir + '/plugin/datepicker/css'));
 
-  gulp.src(config.devDir + '/plugin/datepicker/ui/jquery-ui.min.js')
-      .pipe(gulp.dest(config.publicDir + '/plugin/datepicker'));
+  gulp.src(config.devDir + '/plugin/datepicker/ui/js/jquery-ui.min.js')
+      .pipe(gulp.dest(config.publicDir + '/plugin/datepicker/js'));
 
   // Gallery
   gulp.src([config.devDir + '/plugin/gallery/**/*', '!' + config.devDir + '/plugin/gallery/css/blueimp-gallery.min.css'])
@@ -193,6 +197,13 @@ gulp.task('dist:build', ['dev:build'], function () {
       .pipe(uglify())
       .pipe(rename({suffix: '.min'}))
       .pipe(gulp.dest(config.publicDir + '/plugin/prismjs/js/'));
+
+//slider
+  gulp.src(config.devDir + '/plugin/slider/css/bootstrap-slider.min.css')
+      .pipe(gulp.dest(config.publicDir + '/plugin/slider/css/'));
+
+  gulp.src(config.devDir + '/plugin/slider/js/bootstrap-slider.min.js')
+      .pipe(gulp.dest(config.publicDir + '/plugin/slider/js/'));
 
   // zeroClipboard
   gulp.src(config.devDir + '/plugin/zeroClipboard/*')
