@@ -1,0 +1,28 @@
+.searchBox {
+	margin-bottom:10px;
+}
+.searchMain{
+	width:50%;
+	margin:0 auto;
+}
+
+.searchMain > input{
+	width:80%;
+	float:left;
+	display:inline;
+	border: #337ab7 solid;
+    border-width: 2px 0 2px 2px;
+}
+.searchMain > .btn{
+	border-radius:0;
+    width:15%;
+}
+@media (max-width: 991px) {
+	.searchMain{
+	width:100%;
+	}
+	.searchMain > .btn{
+	border-radius:0;
+    width:20%;
+	}
+}	

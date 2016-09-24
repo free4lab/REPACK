@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/free4lab/!svn/ver/20169/bootstrap-front/trunk/src/main/webapp/dev/sass
+END
+doc.scss
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/free4lab/!svn/ver/20165/bootstrap-front/trunk/src/main/webapp/dev/sass/doc.scss
+END
+_variables.scss
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/free4lab/!svn/ver/20165/bootstrap-front/trunk/src/main/webapp/dev/sass/_variables.scss
+END
+front.scss
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/free4lab/!svn/ver/20169/bootstrap-front/trunk/src/main/webapp/dev/sass/front.scss
+END
+bootstrap.scss
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/free4lab/!svn/ver/20165/bootstrap-front/trunk/src/main/webapp/dev/sass/bootstrap.scss
+END
+_scaffolding.scss
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/free4lab/!svn/ver/20165/bootstrap-front/trunk/src/main/webapp/dev/sass/_scaffolding.scss
+END
+_uniformity.scss
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/free4lab/!svn/ver/20165/bootstrap-front/trunk/src/main/webapp/dev/sass/_uniformity.scss
+END

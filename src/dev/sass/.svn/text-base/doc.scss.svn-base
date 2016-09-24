@@ -1,0 +1,15 @@
+/* F3 document CSS */
+
+.category-content {
+  float: left;
+  width: 20%;
+}
+.block-content {
+  clear: both;
+}
+.top-right-corner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: 0;
+}

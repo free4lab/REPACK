@@ -1,0 +1,39 @@
+/* 通知卡片 */
+.front-no-radius,
+.front-panel,
+.front-msg-badge,
+.front-form-control { /* 无圆角 */
+  border-radius: 0 !important;
+}
+.front-no-box-shadow, .front-panel { /* 无阴影 */
+  box-shadow: none !important;
+}
+.front-last-no-margin p:last-child { /* 最后一个p不加margin */
+  margin: 0 0;
+}
+/* 首页动态卡片 */
+@media (min-width: 768px) {
+  .front-news-panel {
+    position: relative;
+    margin-bottom: 15px;
+  }
+  .front-news-op {
+    position: absolute;
+    right: 15px;
+    bottom: 0;
+  }
+}
+@media (max-width: 767px) {
+  .front-news-op {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: separate;
+    margin-top: 10px;
+  }
+  .front-news-op>.btn {
+    display: table-cell;
+    float: none;
+    width: 1%;
+  }
+}

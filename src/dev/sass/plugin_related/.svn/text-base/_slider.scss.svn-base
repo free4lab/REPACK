@@ -1,0 +1,16 @@
+.front-slider {
+    margin-bottom: 10px;
+}
+.front-slider span {
+    top: 3px;
+    left: 12px;
+    position: relative;
+}
+.slider-label {
+    left: 20px;
+}
+
+.noselect {
+    -webkit-user-select: none;
+    user-select: none;
+}

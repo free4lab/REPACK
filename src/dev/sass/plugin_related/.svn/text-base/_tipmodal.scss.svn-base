@@ -1,0 +1,16 @@
+.front-tipmodal {
+  top: 2px;
+  margin-right: 5px;
+}
+.front-tipmodal.warning{
+  color:#8a6d3b;
+}
+.front-tipmodal.danger{
+  color:#a94442;
+}
+.front-tipmodal.success{
+  color:#3c763d;
+}
+.front-tipmodal.info{
+  color:#31708f;
+}

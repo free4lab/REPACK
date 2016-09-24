@@ -1,0 +1,13 @@
+/* 单行文字过长省略号 */
+.front-text-overflow {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+/* 禁止选中  */
+.noselect {
+  -webkit-touch-callout: none;
+  user-select: none;
+}
