@@ -832,7 +832,8 @@ select[multiple].input-lg, textarea.input-lg {
 
 .searchMain > .btn {
   border-radius: 0;
-  width: 15%; }
+  width: 15%;
+  height: 34px; }
 
 @media (max-width: 991px) {
   .searchMain {

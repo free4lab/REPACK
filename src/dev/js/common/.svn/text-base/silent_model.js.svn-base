@@ -76,10 +76,10 @@
 			$("#slientModel .slientBox .layertitle").css(settings.titleCss);
 			
 			$("#slientModel a.layerclose>img").attr("src", settings.closeImage);
-			$("#slientModel .slientBox").css("width", settings.contentWidth);
+			$("#slientModel .slientBox").css("width", "100%");
 			$("#slientModel .slientBox .layertitle").html(settings.slientTitle);
 			$("#slientModel .slientBox .layercontent").html(settings.slientHtml);
-			$("#slientModel .slientBox img").css("max-width", "880px");
+			$("#slientModel .slientBox img").css("max-width", "100%");
 			
 			$("#slientModel").show();
 		},
