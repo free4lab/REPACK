@@ -13,6 +13,12 @@
 	border: #337ab7 solid;
     border-width: 2px 0 2px 2px;
 }
+
+.searchMain > input:focus{
+	border: #337ab7 solid;
+    border-width: 2px 0 2px 2px;
+}
+
 .searchMain > .btn{
 	border-radius:0;
     width:15%;
