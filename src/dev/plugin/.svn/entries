@@ -1,14 +1,14 @@
 10
 
 dir
-20185
+20328
 http://svn.free4inno.com/svn/free4lab/bootstrap-front/trunk/src/main/webapp/dev/plugin
 http://svn.free4inno.com/svn/free4lab
 
 
 
-2016-09-23T02:16:43.169550Z
-20172
+2016-09-24T03:28:55.207358Z
+20193
 chenzhe
 
 
@@ -48,6 +48,9 @@ bootstrap-datetimepicker
 dir
 
 prismjs
+dir
+
+favico
 dir
 
 zTree

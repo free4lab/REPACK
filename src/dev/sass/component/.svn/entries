@@ -1,14 +1,14 @@
 10
 
 dir
-20185
+20328
 http://svn.free4inno.com/svn/free4lab/bootstrap-front/trunk/src/main/webapp/dev/sass/component
 http://svn.free4inno.com/svn/free4lab
 
 
 
-2016-09-22T09:20:13.209146Z
-20165
+2016-10-08T08:24:05.355878Z
+20277
 chenzhe
 
 
@@ -62,14 +62,14 @@ chenzhe
 
 _table.scss
 file
+20346
 
 
 
-
-2016-09-22T08:47:03.211536Z
-9ee7f6a85ad5b4c5efc643f7e160f00e
-2016-09-22T09:20:13.209146Z
-20165
+2016-10-11T08:04:11.959642Z
+1d48bdec56030905021c3db2083f8b6c
+2016-10-11T08:14:00.068589Z
+20346
 chenzhe
 
 
@@ -92,7 +92,7 @@ chenzhe
 
 
 
-40
+222
 
 _card.scss
 file
@@ -164,7 +164,7 @@ chenzhe
 
 _navbar.scss
 file
-20186
+
 
 
 
@@ -232,14 +232,14 @@ chenzhe
 
 _searchbox.scss
 file
+20340
 
 
 
-
-2016-09-22T08:47:03.210536Z
-fc6162f67f8007286623a407d5a3e07e
-2016-09-22T09:20:13.209146Z
-20165
+2016-10-11T07:04:17.454048Z
+a3287f43d96c54f5f528f2c519b3e6e5
+2016-10-11T07:07:52.041773Z
+20340
 chenzhe
 
 
@@ -262,7 +262,7 @@ chenzhe
 
 
 
-401
+513
 
 _footer.scss
 file

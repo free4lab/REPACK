@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 80
-/svn/free4lab/!svn/ver/20165/bootstrap-front/trunk/src/main/webapp/dev/js/common
+/svn/free4lab/!svn/ver/20327/bootstrap-front/trunk/src/main/webapp/dev/js/common
 END
 tipbox.js
 K 25
@@ -9,17 +9,17 @@ svn:wc:ra_dav:version-url
 V 90
 /svn/free4lab/!svn/ver/20165/bootstrap-front/trunk/src/main/webapp/dev/js/common/tipbox.js
 END
-newappstore.js
-K 25
-svn:wc:ra_dav:version-url
-V 95
-/svn/free4lab/!svn/ver/20165/bootstrap-front/trunk/src/main/webapp/dev/js/common/newappstore.js
-END
 selectFacebox.js
 K 25
 svn:wc:ra_dav:version-url
 V 97
 /svn/free4lab/!svn/ver/20165/bootstrap-front/trunk/src/main/webapp/dev/js/common/selectFacebox.js
+END
+newappstore.js
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/free4lab/!svn/ver/20165/bootstrap-front/trunk/src/main/webapp/dev/js/common/newappstore.js
 END
 parallex.js
 K 25
@@ -39,17 +39,17 @@ svn:wc:ra_dav:version-url
 V 97
 /svn/free4lab/!svn/ver/20165/bootstrap-front/trunk/src/main/webapp/dev/js/common/fr_fileupload.js
 END
-tah.js
-K 25
-svn:wc:ra_dav:version-url
-V 87
-/svn/free4lab/!svn/ver/20165/bootstrap-front/trunk/src/main/webapp/dev/js/common/tah.js
-END
 bootbox.js
 K 25
 svn:wc:ra_dav:version-url
 V 91
 /svn/free4lab/!svn/ver/20165/bootstrap-front/trunk/src/main/webapp/dev/js/common/bootbox.js
+END
+tah.js
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/free4lab/!svn/ver/20165/bootstrap-front/trunk/src/main/webapp/dev/js/common/tah.js
 END
 loading.js
 K 25
@@ -61,7 +61,7 @@ silent_model.js
 K 25
 svn:wc:ra_dav:version-url
 V 96
-/svn/free4lab/!svn/ver/20165/bootstrap-front/trunk/src/main/webapp/dev/js/common/silent_model.js
+/svn/free4lab/!svn/ver/20327/bootstrap-front/trunk/src/main/webapp/dev/js/common/silent_model.js
 END
 divPage.js
 K 25
@@ -97,7 +97,7 @@ front.js
 K 25
 svn:wc:ra_dav:version-url
 V 89
-/svn/free4lab/!svn/ver/20193/bootstrap-front/trunk/src/main/webapp/dev/js/common/front.js
+/svn/free4lab/!svn/ver/20327/bootstrap-front/trunk/src/main/webapp/dev/js/common/front.js
 END
 getCursorPosition.js
 K 25

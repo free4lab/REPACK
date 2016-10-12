@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 85
-/svn/free4lab/!svn/ver/20165/bootstrap-front/trunk/src/main/webapp/dev/sass/component
+/svn/free4lab/!svn/ver/20277/bootstrap-front/trunk/src/main/webapp/dev/sass/component
 END
 _newappstore.scss
 K 25
@@ -13,7 +13,7 @@ _table.scss
 K 25
 svn:wc:ra_dav:version-url
 V 97
-/svn/free4lab/!svn/ver/20165/bootstrap-front/trunk/src/main/webapp/dev/sass/component/_table.scss
+/svn/free4lab/!svn/ver/20346/bootstrap-front/trunk/src/main/webapp/dev/sass/component/_table.scss
 END
 _card.scss
 K 25
@@ -49,7 +49,7 @@ _searchbox.scss
 K 25
 svn:wc:ra_dav:version-url
 V 101
-/svn/free4lab/!svn/ver/20165/bootstrap-front/trunk/src/main/webapp/dev/sass/component/_searchbox.scss
+/svn/free4lab/!svn/ver/20340/bootstrap-front/trunk/src/main/webapp/dev/sass/component/_searchbox.scss
 END
 _panel.scss
 K 25

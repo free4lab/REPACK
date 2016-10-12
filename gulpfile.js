@@ -18,13 +18,13 @@ var config = {
 };
 
 // Dev Bootstrap Sass
-gulp.task('dev:bootstrapcss', function () {
+/*gulp.task('dev:bootstrapcss', function () {
   return gulp.src(config.devDir + '/sass/bootstrap.scss')
       .pipe(sass({
         includePaths: [config.bootstrapDir + '/assets/stylesheets']
       }))
       .pipe(gulp.dest(config.devDir + '/bootstrap/css'));
-});
+});*/
 
 // Dist Bootstrap CSS
 gulp.task('dist:bootstrapcss', function () {
@@ -68,8 +68,8 @@ gulp.task('dev:frontcss', function () {
 // Dist Front CSS
 gulp.task('dist:frontcss', ['dev:frontcss'], function () {
   return gulp.src(config.sourceDir + '/css/front.css')
-      .pipe(minifycss())
-      .pipe(rename({suffix: '.min'}))
+      //.pipe(minifycss())
+      //.pipe(rename({suffix: '.min'}))
       .pipe(gulp.dest(config.publicDir + '/css'));
 });
 
@@ -86,7 +86,7 @@ gulp.task('dev:js', function () {
 });
 
 // Build For Dev
-gulp.task('dev:build', ['dev:bootstrapcss', 'dev:fonts', 'dev:frontcss', 'dev:js']);
+gulp.task('dev:build', ['dev:fonts', 'dev:frontcss', 'dev:js']);
 
 // Build Clean
 gulp.task('clean:dev', function () {
@@ -112,8 +112,8 @@ gulp.task('dist:build', ['dev:build'], function () {
 
   // Front CSS
   gulp.src(config.devDir + '/css/front.css')
-      .pipe(minifycss())
-      .pipe(rename({suffix: '.min'}))
+      //.pipe(minifycss())
+      //.pipe(rename({suffix: '.min'}))
       .pipe(gulp.dest(config.publicDir + '/css'));
 
   // Theme CSS
@@ -137,6 +137,12 @@ gulp.task('dist:build', ['dev:build'], function () {
   // JQuery JS
   gulp.src(config.devDir + '/js/jquery/jquery.min.js')
       .pipe(gulp.dest(config.publicDir + '/js/jquery'));
+
+  //favico JS
+  gulp.src(config.devDir + '/plugin/favico/favico.js')
+      .pipe(uglify())
+      .pipe(rename({suffix: '.min'}))
+      .pipe(gulp.dest(config.publicDir + '/plugin/favico'));
 
   // FileUpload JS
   gulp.src(config.devDir + '/plugin/fileupload/fileupload.js')
