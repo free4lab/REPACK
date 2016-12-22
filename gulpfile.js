@@ -17,14 +17,7 @@ var config = {
   devDir: './src/dev'
 };
 
-// Dev Bootstrap Sass
-/*gulp.task('dev:bootstrapcss', function () {
-  return gulp.src(config.devDir + '/sass/bootstrap.scss')
-      .pipe(sass({
-        includePaths: [config.bootstrapDir + '/assets/stylesheets']
-      }))
-      .pipe(gulp.dest(config.devDir + '/bootstrap/css'));
-});*/
+
 
 // Dist Bootstrap CSS
 gulp.task('dist:bootstrapcss', function () {
@@ -34,11 +27,6 @@ gulp.task('dist:bootstrapcss', function () {
       .pipe(gulp.dest(config.publicDir + '/bootstrap/css'));
 });
 
-// Dev Bootstrap Fonts
-gulp.task('dev:fonts', function () {
-  return gulp.src(config.bootstrapDir + '/assets/fonts/bootstrap/**/*')
-      .pipe(gulp.dest(config.devDir + '/bootstrap/fonts'));
-});
 
 // Dist Bootstrap Fonts
 gulp.task('dist:fonts', function () {
@@ -46,11 +34,7 @@ gulp.task('dist:fonts', function () {
       .pipe(gulp.dest(config.publicDir + '/bootstrap/fonts'));
 });
 
-// Dist Bootstrap Fonts
-gulp.task('dist:fonts', function () {
-  return gulp.src(config.bootstrapDir + '/assets/fonts/bootstrap/**/*')
-      .pipe(gulp.dest(config.devDir + '/bootstrap/fonts'));
-});
+
 
 // Dev Front CSS
 gulp.task('dev:frontcss', function () {
@@ -68,8 +52,9 @@ gulp.task('dev:frontcss', function () {
 // Dist Front CSS
 gulp.task('dist:frontcss', ['dev:frontcss'], function () {
   return gulp.src(config.sourceDir + '/css/front.css')
-      //.pipe(minifycss())
-      //.pipe(rename({suffix: '.min'}))
+      .pipe(gulp.dest(config.publicDir + '/css'));
+      .pipe(minifycss())
+      .pipe(rename({suffix: '.min'}))
       .pipe(gulp.dest(config.publicDir + '/css'));
 });
 
@@ -112,8 +97,9 @@ gulp.task('dist:build', ['dev:build'], function () {
 
   // Front CSS
   gulp.src(config.devDir + '/css/front.css')
-      //.pipe(minifycss())
-      //.pipe(rename({suffix: '.min'}))
+      .pipe(gulp.dest(config.publicDir + '/css'));
+      .pipe(minifycss())
+      .pipe(rename({suffix: '.min'}))
       .pipe(gulp.dest(config.publicDir + '/css'));
 
   // Theme CSS
@@ -130,6 +116,7 @@ gulp.task('dist:build', ['dev:build'], function () {
 
   // Front JS
   gulp.src(config.devDir + '/js/common/front.js')
+      .pipe(gulp.dest(config.publicDir + '/js/common'));
       .pipe(uglify())
       .pipe(rename({suffix: '.min'}))
       .pipe(gulp.dest(config.publicDir + '/js/common'));
