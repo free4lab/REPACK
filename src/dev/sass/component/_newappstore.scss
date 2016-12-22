@@ -1,3 +1,5 @@
+/*应用商店分类组件*/
+
 .pictureSlide{
 	
 	height:247px;
@@ -15,25 +17,56 @@
 	width:66.7%;
 	background-color:#f5f5f5;
 	z-index: 100;
-}
-[class *= categoryMenu] .subitems>dl{
-	overflow:hidden;
-	margin-bottom:7px;
-}
-[class *= categoryMenu] .subitems dt{
-	width:15%;
-	float:left;
-	padding:5px;
+	
+	.subitems{
+		>dl{
+			overflow:hidden;
+			margin-bottom:5px;
+		}	
+		
+		dt{
+			width:15%;
+			float:left;
+			padding:5px;
+		}
+		
+		dd{
+			width: 85%;
+    		float: left;
+    		padding: 5px;
+    		
+    		a{
+				float: left;
+    			padding: 0 8px;
+			}
+		}
+	}
+	
 }
 
-[class *= categoryMenu] .subitems dd{
-	width: 85%;
-    float: left;
-    padding: 5px;
-}
-[class *= categoryMenu] .subitems dd a{
-	float: left;
-    padding: 0 8px;
+@media (max-width:992px){
+	.menus{
+		position:relative;
+	}
+	[class *= categoryMenu]{
+		padding: 15px;
+    	top: 0;
+    	left: 0;
+    	height: 247px;
+    	width: 100%;
+    	
+    	.subitems{
+    		>dl{
+				margin-bottom:0px;
+			}
+    		dt{
+				width:20%;
+			}
+			dd{
+				width: 80%;
+			}
+    	}
+	}
 }
 
 #carousel-example-generic{
@@ -58,8 +91,43 @@
 	height:100%;
 	width:217px;
 }
+
+
 .menuParent{
 	position:relative;
 	overflow:hidden;
 	height:100%;
+}
+
+@media (max-width:767px){
+[class *= categoryMenu] {
+	padding: 5px;
+	position:relative;
+	min-height: 247px;
+	height:auto;
+	
+	.subitems {
+		dt{
+			width:27%;
+		}
+		dd{
+			width: 73%;
+			
+			a{
+    			padding: 0 4px;
+			}
+		}
+	}
+	.advertise{
+		display:none;
+	}
+	.subitems{
+		padding-right:0px;
+	}
+	
+	.menuParent{
+		height:auto;
+	}
+	
+}
 }

@@ -66,19 +66,22 @@ select[multiple].input-lg,textarea.input-lg {
   height: 160px;
   padding-top: 45px;
   margin-top: 100px;
-}
-.footer-copyright {
-  color: #fff;
-}
-.footer-login {
-  border-top: 1px solid #ccc;
-  height: 80px;
-}
-.footer-login > div {
-  padding-top: 30px;
-}
-.front-login-inner {
-  min-height: 100%;
-  height: auto !important;
-  margin: 0 auto -80px;
+  
+  &-copyright{
+  	color: #fff;
+  }
+  &-login{
+  	border-top: 1px solid #ccc;
+  	height: 80px;
+  	
+  	>div{
+  		padding-top: 30px;
+  	}
+  	
+  	&-inner{
+  		min-height: 100%;
+ 	 	height: auto !important;
+  		margin: 0 auto -80px;
+  	}
+  }
 }

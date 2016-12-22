@@ -3,29 +3,34 @@
   margin: 0 auto;
   width: 48px;
   height: 54px;
+  
+  &-block{
+  	 background-color: #3777BC;
+  	float: left;
+  	height: 46px;
+  	margin-left: 3px;
+  	width: 12px;
+  	opacity: 0.1;
+  	animation-name: bounceG;
+  	animation-duration: 1.3s;
+  	animation-iteration-count: infinite;
+  	animation-direction: normal;
+  	transform: scale(0.7);
+  }
+  
+  > div:nth-child(1){
+  	animation-delay: 0.39s;
+  }
+  
+  > div:nth-child(2) {
+  	animation-delay: 0.52s;
+	}
+	
+  > div:nth-child(3) {
+  	animation-delay: 0.65s;
+	}
 }
-.front-loading-block {
-  background-color: #3777BC;
-  float: left;
-  height: 46px;
-  margin-left: 3px;
-  width: 12px;
-  opacity: 0.1;
-  animation-name: bounceG;
-  animation-duration: 1.3s;
-  animation-iteration-count: infinite;
-  animation-direction: normal;
-  transform: scale(0.7);
-}
-.front-loading > div:nth-child(1) {
-  animation-delay: 0.39s;
-}
-.front-loading > div:nth-child(2) {
-  animation-delay: 0.52s;
-}
-.front-loading > div:nth-child(3) {
-  animation-delay: 0.65s;
-}
+
 @keyframes bounceG {
   from {
     transform: scale(1.2);
