@@ -1,22 +1,27 @@
+/*应用商店布局*/
+
 /* 栅格搜索框 */
 .front-input-search {
   margin-bottom: 20px;
+  
+  > .form-control {
+  	width: 80%;
+  	float: left;
+  	border-right: 0;
+	}
+	
+  > .btn {
+  	width: 20%;
+  	border-radius: 0;
+  }
 }
-.front-input-search > .form-control {
-  width: 80%;
-  float: left;
-  border-right: 0;
-}
-.front-input-search > .btn {
-  width: 20%;
-  border-radius: 0;
-}
+
 /* 旋转木马 */
 .as-carousel {
   margin-bottom: 20px;
-}
-.as-carousel img {
-  width: 100%;
+  img {
+  	width: 100%;
+  }
 }
 /* 应用介绍 */
 .as-desc {
@@ -29,39 +34,38 @@
     position: fixed;
     left: 0;
     bottom: 0;
-
     width: 100%;
-
     z-index: 1080; /* 防止被浮层及Panel遮盖 */
-
     background-color: #f8f8f8;
-
     list-style: none;
     padding-left: 0;
-
     margin-bottom: 0;
-  }
-  .as-horizontal-nav > li.active > a {
-    background-color: #3778bc;
-    color: #fff;
-  }
-  .as-horizontal-nav > li > a {
-    text-align: center;
-    display: block;
+    
+    > li{
+    	&.active >a{
+    		background-color: #3778bc;
+    		color: #fff;
+    	}
+    	
+    	>a{
+    		text-align: center;
+    		display: block;
+    		float: left;
+    		padding: 15px;
+    		background-color: #f8f8f8;
+    		font-size: 1.2em;
+    		text-decoration: none;
+    		color: #333;
+    		position: relative;
 
-    float: left;
-    padding: 15px;
-    background-color: #f8f8f8;
-    font-size: 1.2em;
-    text-decoration: none;
-    color: #333;
-    position: relative;
-
-    /* 超过宽度显示省略号 */
-    white-space:nowrap;
-    text-overflow:ellipsis;
-    overflow:hidden;
+    		/* 超过宽度显示省略号 */
+    		white-space:nowrap;
+    		text-overflow:ellipsis;
+    		overflow:hidden;
+    	}
+    }
   }
+  
   .as-horizontal-nav-2 > li > a {
     width: 50%;
   }
@@ -81,26 +85,29 @@
     margin: 0;
     padding-left: 0;
     list-style: none;
-  }
-  .as-horizontal-nav > li.active:after {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background: #3778bc;
-    content: '';
-  }
-  .as-horizontal-nav > li {
-    float: left;
-    position: relative;
-    display: block;
-  }
-  .as-horizontal-nav > li > a {
-    color: #777;
-    text-decoration: none;
-    display: block;
-    padding: 15px;
-    line-height: 20px;
+    
+    >li{
+    	float: left;
+    	position: relative;
+    	display: block;
+    	
+    	&.active:after{
+    		position: absolute;
+    		top: 100%;
+    		left: 0;
+    		width: 100%;
+    		height: 4px;
+    		background: #3778bc;
+    		content: '';
+    	}
+    	
+    	>a{
+    		color: #777;
+    		text-decoration: none;
+    		display: block;
+    		padding: 15px;
+    		line-height: 20px;
+    	}
+    }
   }
 }

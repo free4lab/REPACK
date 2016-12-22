@@ -1,9 +1,10 @@
 /* 选项 */
 .front-select-item {
-  padding: 8px 15px 0;
-}
-.front-select-item > span {
-  cursor: pointer;
+  	padding: 8px 15px 0;
+  
+  	> span {
+  		cursor: pointer;
+	}
 }
 .front-selected-btn-area {
   margin-bottom: 8px;
@@ -34,15 +35,17 @@
   list-style-type:none;
   cursor:default;
   border-top: 1px solid #dddddd;
+  
+  >li{
+		margin: 3% 3% -1% -7%;
+		
+		>a{
+			font-size: small;
+  			cursor:pointer;
+		}  		
+  }
 }
 
-#freeshare-memberselected >li{
-  margin: 3% 3% -1% -7%;
-}
-#freeshare-memberselected >li >a{
-  font-size: small;
-  cursor:pointer;
-}
 
 #freeshare-memberNum{
   margin-bottom: 2%;
@@ -65,15 +68,17 @@
   list-style-type:none;
   cursor:default;
   border-top: 1px solid #dddddd;
+  
+  >li{
+  	margin: 2% 3% 3% -12%;
+  	
+  	>a{
+  		font-size: small;
+  		cursor:pointer;
+  	}
+  }
 }
 
-#freeshare-groupselected >li{
-  margin: 2% 3% 3% -12%;
-}
-#freeshare-groupselected >li >a{
-  font-size: small;
-  cursor:pointer;
-}
 
 #freeshare-groupNum{
   margin-bottom: 2%;
@@ -128,34 +133,39 @@
   margin:18px;
   cursor:pointer;
   border:solid 1px #eee;
-}
-.front-imgbox img {
-  width:68px;
-  height:68px;
-}
-.front-imgbox-70 {
-  float:left;
-  width:70px;
-  height:70px;
-  margin:18px;
-}
-.front-imgbox-70 img {
-  width:68px;
-  height:68px;
-  border:solid 1px #eee;
-}
-.front-imgbox-100 {
-  float:left;
-  width:100px;
-  height:100px;
-  margin:18px;
+  
+  img {
+  	width:68px;
+  	height:68px;
+	}
+	
+	&-70{
+		float:left;
+  		width:70px;
+  		height:70px;
+  		margin:18px;
+  		
+  		img {
+  			width:68px;
+  			height:68px;
+  			border:solid 1px #eee;
+		}
+	}
+	
+	&-100{
+		float:left;
+  		width:100px;
+  		height:100px;
+  		margin:18px;
+  		
+  		img {
+  			width:98px;
+  			height:98px;
+  			border:solid 1px #eee;
+		}
+	}
 }
 
-.front-imgbox-100 img {
-  width:98px;
-  height:98px;
-  border:solid 1px #eee;
-}
 
 .front-imgbox-70 p, .front-imgbox-100 p {
   text-align:center;

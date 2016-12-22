@@ -1,0 +1,48 @@
+/*
+  前端框架用
+*/
+
+/* 文字logo */
+.nav-brand-text {
+    font-style: italic;
+    line-height: 30px;
+    font-size: 30px;
+    color: #777;
+    
+    &:hover,&:focus{
+    	text-decoration: none;
+    	font-weight: 400;
+    	color: #333;
+    }
+}
+/* 标题下线 */
+.front-doc{
+	>h2 {
+    	border-bottom: 1px solid #ccc;
+    	&:first-child{
+    		 margin-top: 0;
+		}
+    }
+    h3{
+    	margin-top: 10px;
+    }
+    
+    .divider {
+    /* 标题分割线 */
+    	margin-top: 10px;
+    	margin-bottom: 10px;
+    	height: 1px;
+    	background-color: #ddd;
+	}
+}
+/* 示例代码水平滚动条 */
+.front-code {
+    word-break: normal;
+    word-wrap: normal;
+    max-height: 80%;
+    margin-bottom: 20px;
+}
+/* Label正常颜色 */
+label {
+    font-weight: normal;
+}

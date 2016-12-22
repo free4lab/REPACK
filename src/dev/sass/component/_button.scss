@@ -1,49 +1,53 @@
+/* 按钮组 */
 
-/* 选项栏 */
 .front-toolbar {
     position: relative;
     padding-bottom: 10px;
-}
-/* 右浮动按钮 */
-@media (min-width: 768px) {
-    .front-toolbar > .btn {
-        float: right;
+    
+    /* 右浮动按钮 */	
+    > .btn {
+    	@media (min-width: 768px) {
+        	float: right;
+        }
+        @media (max-width: 767px) {
+        	position: absolute;
+        	top: 0px;
+        }	
     }
+    /* 折叠菜单 */	
+    .navbar-toggle .icon-bar {
+    	background-color: #888;
+	}	
+	.navbar-toggle{
+		background-color: #fff;
+    	border: 1px solid transparent;
+    	border-color: #ccc;
+    	margin: 0px;
+	}
 }
-@media (max-width: 767px) {
-    .front-toolbar > .btn {
-        position: absolute;
-        top: 0px;
-    }
-}
+
+
 /* 折叠菜单 */
 .front-navbar-toggle {
     border-color: #ccc !important;
     margin-right: 0px;
 }
-.front-toolbar .navbar-toggle .icon-bar {
-    background-color: #888;
-}
-.front-toolbar .navbar-toggle {
-    background-color: #fff;
-    border: 1px solid transparent;
-    border-color: #ccc;
-}
-.front-toolbar .navbar-toggle {
-    margin: 0px;
-}
+
 /* 按钮组 */
 .front-btn-group {
     position: relative;
     vertical-align: middle;
+    
+    > .btn {
+    	position: relative;
+    	float: left;
+	
+		&.active,&:active,&:hover{
+			 z-index: 2;
+		}
+	}
 }
-.front-btn-group > .btn {
-    position: relative;
-    float: left;
-}
-.front-btn-group > .btn.active, .front-btn-group > .btn:active, .front-btn-group > .btn:hover {
-    z-index: 2;
-}
+
 /* 水平按钮组 */
 @media (min-width: 768px) {
     .other .collapse {
@@ -53,52 +57,64 @@
     .front-toolbar .front-toolbar-header {
         display: inline-block;
     }
-    .front-btn-group .btn + .btn {
-        margin-left: -1px;
-    }
-    .front-btn-group > .btn:not(:first-child):not(:last-child) {
-        border-radius: 0;
-    }
-    .front-btn-group > .btn:first-child {
-        margin-left: 0;
-    }
-    .front-btn-group > .btn:first-child:not(:last-child) {
-        border-bottom-right-radius: 0;
-        border-top-right-radius: 0;
-    }
-    .front-btn-group > .btn:last-child:not(:first-child) {
-        border-bottom-left-radius: 0;
-        border-top-left-radius: 0;
+    
+    .front-btn-group {
+    	.btn + .btn {
+        	margin-left: -1px;
+    	}
+    	
+    	> .btn {
+    		&:not(:first-child):not(:last-child){
+    			border-radius: 0;
+    		}
+    		&:first-child {
+    			 margin-left: 0;
+    		}
+    		&:first-child:not(:last-child) {
+    			border-bottom-right-radius: 0;
+        		border-top-right-radius: 0;
+    		}
+    		&:last-child:not(:first-child) {
+    			border-bottom-left-radius: 0;
+        		border-top-left-radius: 0;
+    		}
+    	}
+    	
     }
 }
 /* 垂直按钮组 */
 @media (max-width: 767px) {
     .front-btn-group {
         margin-top: 10px;
+        
+        > .btn {
+        	display: block;
+        	float: none;
+        	width: 100%;
+        	max-width: 100%;
+        	
+        	+ .btn {
+        		margin-top: -1px;
+        		margin-left: 0;
+    		}
+    		
+    		&:not(:first-child):not(:last-child) {
+        		border-radius: 0;
+    		}
+    		&:first-child:not(:last-child) {
+        		border-top-right-radius: 4px;
+        		border-bottom-right-radius: 0;
+        		border-bottom-left-radius: 0;
+    		}
+    		&:last-child:not(:first-child) {
+        		border-bottom-left-radius: 4px;
+        		border-top-right-radius: 0;
+        		border-top-left-radius: 0;
+    		}
+    	}
+    	
     }
-    .front-btn-group > .btn {
-        display: block;
-        float: none;
-        width: 100%;
-        max-width: 100%;
-    }
-    .front-btn-group > .btn + .btn {
-        margin-top: -1px;
-        margin-left: 0;
-    }
-    .front-btn-group > .btn:not(:first-child):not(:last-child) {
-        border-radius: 0;
-    }
-    .front-btn-group > .btn:first-child:not(:last-child) {
-        border-top-right-radius: 4px;
-        border-bottom-right-radius: 0;
-        border-bottom-left-radius: 0;
-    }
-    .front-btn-group > .btn:last-child:not(:first-child) {
-        border-bottom-left-radius: 4px;
-        border-top-right-radius: 0;
-        border-top-left-radius: 0;
-    }
+
 }
 @media ( min-width :768px) {
   .navbar-toggle {

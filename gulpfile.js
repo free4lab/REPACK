@@ -222,6 +222,11 @@ gulp.task('dist:build', ['dev:build'], function () {
       .pipe(gulp.dest(config.publicDir + '/plugin/zTree/js/'));
 });
 
+//clean svn
+gulp.task('clean:svn', function(){
+  del(config.devDir+'/**/.svn');
+
+});
 // Clean Dist
 gulp.task('clean:dist', function () {
   del(config.publicDir);
