@@ -5,5 +5,11 @@
     border-top: none;
 }
 .front-table>tbody>tr>td:last-child, {
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid $tableBorder;
+}
+.table>thead>tr>th {
+    border-bottom: 2px solid $tableBorder;
+}
+.table-striped>tbody>tr:nth-of-type(odd) {
+    background-color: $tableStripedTr_odd;
 }

@@ -16,12 +16,12 @@
     }
     /* 折叠菜单 */	
     .navbar-toggle .icon-bar {
-    	background-color: #888;
+    	background-color: $navbarToggleIconBarColor;
 	}	
 	.navbar-toggle{
-		background-color: #fff;
+		background-color: $navbarToggleColor;
     	border: 1px solid transparent;
-    	border-color: #ccc;
+    	border-color:$navbarToggleBorder;
     	margin: 0px;
 	}
 }
@@ -120,4 +120,69 @@
   .navbar-toggle {
     display: none
   }
+}
+.btn-default {
+    color: $btnDefaultFontColor;
+    background-color: $btnDefaultColor;
+    border-color: $btnDefaultBorder;
+
+	&:hover{
+    	color:$btnDefaultFontColor_Hover;
+		background-color:$btnDefaultColor_Hover;
+		border-color:$btnDefaultBorder_Hover;
+    }
+	&.focus,&:focus{
+    	color:$btnDefaultFontColor_Focus;
+		background-color:$btnDefaultColor_Focus;
+		border-color:$btnDefaultBorder_Focus;
+    }
+    &.active,&:active{
+    	color:$btnDefaultFontColor_Active;
+		background-color:$btnDefaultColor_Active;
+		border-color:$btnDefaultBorder_Active;
+		
+		&:hover,&:focus{
+ 			color:$btnDefaultFontColor_Click;
+			background-color:$btnDefaultColor_Click;
+			border-color:$btnDefaultBorder_Click;
+ 		}
+    }
+
+}
+.open>.btn-default.dropdown-toggle {
+    	color:$btnDefaultFontColor_Active;
+		background-color:$btnDefaultColor_Active;
+		border-color:$btnDefaultBorder_Active;
+}
+.btn-primary {
+    color: $btnPrimaryFontColor;
+    background-color: $btnPrimaryColor;
+    border-color: $btnPrimaryBorder;
+    
+    &:hover {
+   		color: $btnPrimaryFontColor_Hover;
+    	background-color: $btnPrimaryColor_Hover;
+    	border-color: $btnPrimaryBorder_Hover;
+    }
+    &.focus,&:focus{
+    	color:$btnPrimaryFontColor_Focus;
+		background-color:$btnPrimaryColor_Focus;
+		border-color:$btnPrimaryBorder_Focus;
+    }
+    &.active,&:active {
+   		color: $btnPrimaryFontColor_Active;
+    	background-color: $btnPrimaryColor_Active;
+    	border-color: $btnPrimaryBorder_Active;
+    	
+    	&:hover,&:focus{
+ 			color:$btnPrimaryFontColor_Click;
+			background-color:$btnPrimaryColor_Click;
+			border-color:$btnPrimaryBorder_Click;
+ 		}
+    }
+}
+.open>.btn-primary.dropdown-toggle{
+    color: $btnPrimaryFontColor_Active;
+    background-color: $btnPrimaryColor_Active;
+    border-color: $btnPrimaryBorder_Active;
 }

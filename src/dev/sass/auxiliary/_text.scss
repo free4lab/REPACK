@@ -11,3 +11,10 @@
   -webkit-touch-callout: none;
   user-select: none;
 }
+
+a{
+	color:$alinkFontColor;
+	&:focus,&:hover{
+		color:$alinkFontColor_Focus;
+	}
+}

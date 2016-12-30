@@ -1,3 +1,9 @@
+.modal-content {
+    background-color: $modelContentColor;
+}    
+.close {
+    color: $modelHeaderClose;
+}
 /* 选项 */
 .front-select-item {
   	padding: 8px 15px 0;
@@ -116,12 +122,14 @@
 }
 /*头部和底部*/
 .modal-header {
-  background-color:#f5f5f5;
+  background-color: $modelHeaderColor;
+  border-bottom: 1px solid $modelHeaderBorder;
   border-top-left-radius:10px;
   border-top-right-radius:10px;
 }
 .modal-footer {
-  background-color:#f5f5f5;
+  background-color: $modelFooterColor;
+  border-top: 1px solid $modelFooterBorder;
   border-bottom-left-radius:10px;
   border-bottom-right-radius:10px;
 }

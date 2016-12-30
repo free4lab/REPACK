@@ -36,14 +36,14 @@
     bottom: 0;
     width: 100%;
     z-index: 1080; /* 防止被浮层及Panel遮盖 */
-    background-color: #f8f8f8;
+    background-color: $footerColor;
     list-style: none;
     padding-left: 0;
     margin-bottom: 0;
     
     > li{
     	&.active >a{
-    		background-color: #3778bc;
+    		background-color: $navActiveColor;
     		color: #fff;
     	}
     	

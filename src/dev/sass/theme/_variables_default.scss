@@ -1,11 +1,7 @@
-//默认样式
+/* //默认样式
  //页面
 $bodyColor: #e7e7e7 !default;
 $bodyFontColor: #333 !default;
-//---------------------------------------------------
-//链接颜色
-$alinkFontColor:#337ab7 !default;
-$alinkFontColor_Focus:#23527c !default;
 //---------------------------------------------------
 //导航栏
 $navbarColor: #f8f8f8 !default;
@@ -14,10 +10,6 @@ $navActiveColor: #3778bc !default;
 $navFontColor: #777 !default;
 $navFontHoverColor: #333 !default;
 $navbarImgUrl: '' !default;
-//打开下拉菜单的菜单项
-$navbarOpenColor:#e7e7e7 !default;
-$navbarOpenFontColor:#555 !default;
-
 //导航栏弹出菜单
 $navPopoverColor:#fff !default;
 $navPopoverBorder:rgba(0, 0, 0, .2) !default;
@@ -36,8 +28,6 @@ $navRightAreaFontColor:#777 !default;
 //横向菜单转垂直菜单，默认隐藏
 $navCollapseColor:#f8f8f8 !default;
 $navCollapseBorder:#e7e7e7 !default;
-$navCollapseFontColor:#777 !default;
-$navCollapseFontColor_Focus:#333 !default;
 //--------------------------------------------
 //页脚
 $footerColor: #f8f8f8 !default;
@@ -90,22 +80,29 @@ $listGroupItemBorder_Active:#337ab7 !default;
 $frontNavLeftSubActive:#e7e7e7 !default;
 //--------------------------------------------
 //按钮组
-//未选中按钮
 $btnDefaultFontColor:#333 !default;
 $btnDefaultColor:#fff !default;
 $btnDefaultBorder:#ccc !default;
-//未选中按钮hover
+
 $btnDefaultFontColor_Hover: #333 !default;
 $btnDefaultColor_Hover: #e6e6e6 !default;
 $btnDefaultBorder_Hover: #adadad !default;
-//未选中按钮focus
+
 $btnDefaultFontColor_Focus: #333 !default;
 $btnDefaultColor_Focus: #e6e6e6 !default;
 $btnDefaultBorder_Focus: #8c8c8c !default;
-//未选中按钮active
+
 $btnDefaultFontColor_Active: #333 !default;
 $btnDefaultColor_Active: #e6e6e6 !default;
 $btnDefaultBorder_Active: #adadad !default;
+
+$btnDefaultActiveFontColor_Hover:#333 !default;
+$btnDefaultActiveColor_Hover:#d4d4d4 !default;
+$btnDefaultActiveBorder_Hover:#8c8c8c !default;
+
+$btnDefaultActiveFontColor_Focus:#333 !default;
+$btnDefaultActiveColor_Focus:#d4d4d4 !default;
+$btnDefaultActiveBorder_Focus:#8c8c8c !default;
 
 //按钮点击时
 $btnDefaultFontColor_Click: #333 !default;
@@ -170,4 +167,4 @@ $parallax_2:"";
 $parallax_3:url(../img/pic2.jpg);
 $parallax_4:"";
 $parallax_5:url(../img/pic3.jpg);
-$parallax_6:"";
+$parallax_6:""; */

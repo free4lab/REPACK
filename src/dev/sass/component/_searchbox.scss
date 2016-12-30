@@ -10,11 +10,11 @@
 		width:80%;
 		float:left;
 		display:inline;
-		border: #337ab7 solid;
+		border: $searchMainBorder solid;
     	border-width: 2px 0 2px 2px;
 	
 		&:focus{
-			border: #337ab7 solid;
+			border: $searchMainBorder solid;
     		border-width: 2px 0 2px 2px;
 		}
 	}

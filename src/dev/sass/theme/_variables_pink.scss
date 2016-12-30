@@ -1,0 +1,167 @@
+/* //页面
+$bodyColor: #FFE7DC;
+$bodyFontColor: #56474B;
+//---------------------------------------------------
+//链接颜色
+$alinkFontColor:#9D8189;
+$alinkFontColor_Focus:#816A71;
+//---------------------------------------------------
+//导航栏
+$navbarColor: #9D8189;
+$navBorderColor: transparent;
+$navActiveColor: #FFCAD4;
+$navFontColor: #FFCAD4;
+$navFontHoverColor: #FFE5D9;
+$navbarImgUrl: '';
+//打开下拉菜单的菜单项
+$navbarOpenColor:#816A71;
+$navbarOpenFontColor:#FFE5D9;
+
+//导航栏弹出菜单
+$navPopoverColor:#FFFAF8;
+$navPopoverBorder:rgba(0, 0, 0, .2) !default;
+$navPopoverDeviderColor:#E8D1C6;
+
+$navPopoverAlinkFontColor:#333 !default;
+$navPopoverAlinkFontColor_Focus:#262626 !default;
+$navPopoverAlinkColor_Focus:#FFF3ED;
+
+$navPopoverArrowColor:#fff !default;
+$navPopoverArrowBorder:rgba(0, 0, 0, .25) !default;
+//产品导航
+$navCurProBorder:#ccc !default;
+//右侧按钮
+$navRightAreaFontColor:#FFCAD4;
+//横向菜单转垂直菜单，默认隐藏
+$navCollapseColor:#9D8189;
+$navCollapseBorder:#E8D1C6;
+$navCollapseFontColor:#FFCAD4;
+$navCollapseFontColor_Focus: #FFE5D9;
+//--------------------------------------------
+//页脚
+$footerColor: #9D8189;
+$footerImgUrl: '';
+//--------------------------------------------
+//卡片
+$panelHeaderFontColor: inherit;
+$panelHeaderColor: #FFF3ED;
+$panelHeaderBorderColor: #E8D1C6;
+$panelBodyColor: #FFFAF8;
+$panelBodyFontColor: inherit !default;
+$panelBackgroundColor: #fff !default;
+//--------------------------------------------
+//分页
+$paginationFontColor:inherit;
+$paginationColor:#FFFAF8 !default;
+$paginationBorder:#E8D1C6;
+$paginationFontColor_Focus:inherit;
+$paginationColor_Focus:#FFF3ED;
+$paginationBorder_Focus:#E8D1C6;
+//当前页
+$paginationActiveFontColor:#FFE5D9;
+$paginationActiveColor:#9D8189;
+$paginationActiveBorder:#9D8189;
+//不可点击页
+$paginationDisableFontColor:#777 !default;
+$paginationDisableColor:#FFFAF8;
+$paginationDisableBorder:#E8D1C6;
+//---------------------------------------------
+//左侧栏
+//左侧栏整体边框
+$navLeftSubBorder:#E8D1C6;
+//菜单项背景颜色
+$listGroupItemColor:#FFFAF8;
+//菜单项被选中时的背景颜色
+$listGroupItemColor_Focus:#FFF3ED;
+//菜单项边框颜色
+$listGroupItemBorder:#E8D1C6;
+//菜单项字体颜色
+$listGroupItemFontColor:inherit;
+//菜单项被选中时的字体颜色
+$listGroupItemFontColor_Focus:inherit;
+//当前菜单项字体颜色
+$listGroupItemFontColor_Active:#FFE5D9;
+//当前菜单项背景颜色
+$listGroupItemColor_Active:#9D8189;
+//当前菜单项边框颜色
+$listGroupItemBorder_Active:#9D8189;
+//当前子菜单项背景颜色
+$frontNavLeftSubActive:#FFF3ED;
+//--------------------------------------------
+//按钮组
+//未选中按钮
+$btnDefaultFontColor:inherit;
+$btnDefaultColor:#FFFAF8;
+$btnDefaultBorder:#E8D1C6;
+//未选中按钮hover
+$btnDefaultFontColor_Hover: inherit;
+$btnDefaultColor_Hover: #FFF3ED;
+$btnDefaultBorder_Hover: #E8D1C6;
+//未选中按钮focus
+$btnDefaultFontColor_Focus: inherit;
+$btnDefaultColor_Focus: #FFF7F4;
+$btnDefaultBorder_Focus: #E8D1C6;
+//未选中按钮active
+$btnDefaultFontColor_Active: inherit;
+$btnDefaultColor_Active: #FFF3ED;
+$btnDefaultBorder_Active: #E8D1C6;
+
+//按钮点击时
+$btnDefaultFontColor_Click: inherit;
+$btnDefaultColor_Click: #FFEEE6;
+$btnDefaultBorder_Click: #E8D1C6;
+		    
+$btnPrimaryFontColor:#FFE5D9;
+$btnPrimaryColor:#9D8189;
+$btnPrimaryBorder:#9D8189;
+
+$btnPrimaryFontColor_Hover:#FFE5D9;
+$btnPrimaryColor_Hover:#816A71;
+$btnPrimaryBorder_Hover:#816A71;
+
+$btnPrimaryFontColor_Focus: #FFE5D9;
+$btnPrimaryColor_Focus: #735E64;
+$btnPrimaryBorder_Focus: #735E64;
+
+$btnPrimaryFontColor_Active:#FFE5D9;
+$btnPrimaryColor_Active:#8F767D;
+$btnPrimaryBorder_Active:#8F767D;
+
+//按钮点击时
+$btnPrimaryFontColor_Click: #FFE5D9;
+$btnPrimaryColor_Click: #735E64;
+$btnPrimaryBorder_Click: #735E64;
+
+//按钮组折叠时
+$navbarToggleColor:#FFFAF8;
+$navbarToggleBorder:#E8D1C6;
+$navbarToggleIconBarColor:#9D8189;
+//--------------------------------------------
+//表格
+$tableBorder:#E8D1C6 ;
+//条纹表格的奇数列背景
+$tableStripedTr_odd:#FFF3ED;
+//---------------------------------------------
+//搜索框
+$searchMainBorder:#9D8189;
+//---------------------------------------------
+//模态框
+//模态框主体颜色
+$modelContentColor:#FFFAF8;
+
+$modelHeaderColor:#FFF3ED;
+$modelHeaderBorder:#E8D1C6;
+//关闭按钮的颜色
+$modelHeaderClose:#000;
+
+$modelFooterColor:#FFF3ED;
+$modelFooterBorder:#E8D1C6;
+
+//-----------------------------------------------
+//loading
+//加载条颜色
+$frontLoadingBlock:#9D8189; 
+//-----------------------------------------------
+//应用商店组件
+$categoryMenuColor:#FFFAF8;
+ */

@@ -52,7 +52,7 @@ gulp.task('dev:frontcss', function () {
 // Dist Front CSS
 gulp.task('dist:frontcss', ['dev:frontcss'], function () {
   return gulp.src(config.sourceDir + '/css/front.css')
-      .pipe(gulp.dest(config.publicDir + '/css'));
+      .pipe(gulp.dest(config.publicDir + '/css'))
       .pipe(minifycss())
       .pipe(rename({suffix: '.min'}))
       .pipe(gulp.dest(config.publicDir + '/css'));
@@ -97,7 +97,7 @@ gulp.task('dist:build', ['dev:build'], function () {
 
   // Front CSS
   gulp.src(config.devDir + '/css/front.css')
-      .pipe(gulp.dest(config.publicDir + '/css'));
+      .pipe(gulp.dest(config.publicDir + '/css'))
       .pipe(minifycss())
       .pipe(rename({suffix: '.min'}))
       .pipe(gulp.dest(config.publicDir + '/css'));
@@ -116,7 +116,7 @@ gulp.task('dist:build', ['dev:build'], function () {
 
   // Front JS
   gulp.src(config.devDir + '/js/common/front.js')
-      .pipe(gulp.dest(config.publicDir + '/js/common'));
+      .pipe(gulp.dest(config.publicDir + '/js/common'))
       .pipe(uglify())
       .pipe(rename({suffix: '.min'}))
       .pipe(gulp.dest(config.publicDir + '/js/common'));

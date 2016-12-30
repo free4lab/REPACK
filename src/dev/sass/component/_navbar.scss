@@ -11,7 +11,22 @@
   		background-color: transparent;
   	}
   }
+  .navbar-nav>.open>a{
+  	&,&:focus,&:hover{
+  		background-color: $navbarOpenColor;
+    	color: $navbarOpenFontColor;
+  	}
+  }
   
+}
+@media (max-width: 767px){
+	.navbar-default .navbar-nav .open .dropdown-menu>li>a {
+    	color: $navCollapseFontColor;
+    	
+    	&:hover,&:focus{
+    		color: $navCollapseFontColor_Focus;
+    	}
+	}
 }
 /* 导航栏横向菜单当前菜单样式 */
 .front-active:after{
@@ -71,8 +86,8 @@
     top: 50px;
     left: 0;
     right: 0;
-    background-color: #f8f8f8;
-    border-top: 1px solid #e7e7e7;
+    background-color:$navCollapseColor;
+    border-top: 1px solid $navCollapseBorder;
     padding: 0 15px;
   }
   /* 导航栏去掉左右padding */
@@ -163,7 +178,7 @@
   .area {
   	/* 导航栏右侧按钮通用样式 */
   	float: left;
-  	color: #777;
+  	color: $navRightAreaFontColor;
   	cursor: pointer;
   	top: 0; /* 清除glyphicon top: 1px*/
 	}
@@ -205,11 +220,12 @@
   padding: 1px;
   text-align: left;
   white-space: normal;
-  background-color: #fff;
+  background-color: $navPopoverColor;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
   border: 1px solid #ccc;
-  border: 1px solid rgba(0, 0, 0, .2);
+  border: 1px solid $navPopoverBorder;
+
   
   > .arrow{
   	@include nav-arrow;
@@ -230,14 +246,14 @@
   		margin-left: -11px;
   		border-top-width: 0;
   		border-bottom-color: #999;
-  		border-bottom-color: rgba(0, 0, 0, .25);
+  		border-bottom-color: $navPopoverArrowBorder;
   	
   		&:after{
   			top: 1px;
   			margin-left: -10px;
   			content: " ";
   			border-top-width: 0;
-  			border-bottom-color: #fff;
+  			border-bottom-color: $navPopoverArrowColor;
   		}
   	}
 }
@@ -280,7 +296,7 @@
   		margin: 2px 0 0;
   		text-align: left;
   		list-style: none;
-  		background-color: #fff;
+  		background-color: $navPopoverColor;
   		-webkit-background-clip: padding-box;
   		background-clip: padding-box;
   		
@@ -288,20 +304,20 @@
  			height: 1px;
   			margin: 9px 0;
   			overflow: hidden;
-  			background-color: #e5e5e5;
+  			background-color: $navPopoverDeviderColor;
 		}
 		
 		>li >a {
 			display: block;
   			padding: 3px 20px;
  	 		clear: both;
-  			color: #333;
+  			color: $navPopoverAlinkFontColor;
   			white-space: nowrap;
 		
 			&:hover,&:focus{
-				color: #262626;
+				color: $navPopoverAlinkFontColor_Focus;
   				text-decoration: none;
-  				background-color: #f5f5f5;
+  				background-color: $navPopoverAlinkColor_Focus;
 			}		
 		} 
   	}	
@@ -321,20 +337,12 @@
 
 } 
 .nav-left-sub {
-    border-left: 1px solid #ddd;
-    border-right: 1px solid #ddd;
-    border-bottom: 1px solid #ddd;
-    
     .list-group-item {
     	border: none;
 	}
 	
 	&.open {
     	display: block;
-	}
-	
-	.front-nav-left-sub-active {
-    	background-color: #e7e7e7;
 	}
 	
 }
@@ -346,7 +354,7 @@
 /* 产品导航之当前产品样式 */
 .nav-cur-pro {
     margin-bottom: 0;
-    border: 1px solid #ccc;
+    border: 1px solid $navCurProBorder;
     width: 120px;
     height: 120px;
     position: absolute;
@@ -357,8 +365,8 @@
     	width: 90px;
     	height: 90px;
     	content: '';
-    	border-left: 1px solid #fff;
-    	border-top: 1px solid #fff;
+    	border-left: 1px solid $navPopoverColor;
+    	border-top: 1px solid $navPopoverColor;
     	position: absolute;
     	top: -1px;
     	left: -1px;   
@@ -368,10 +376,23 @@
     	width: 90px;
     	height: 90px;
     	content: '';
-    	border-right: 1px solid #fff;
-    	border-bottom: 1px solid #fff;
+    	border-right: 1px solid $navPopoverColor;
+    	border-bottom: 1px solid $navPopoverColor;
     	position: absolute;
     	right: -1px;
     	bottom: -1px;
     }
+}
+/*下拉菜单*/
+.dropdown-menu{
+	background-color:$navPopoverColor;	
+	
+	>li>a{
+		color:$navPopoverAlinkFontColor;
+		
+		&:focus,&:hover{
+			color:$navPopoverAlinkFontColor_Focus;
+			background-color:$navPopoverAlinkColor_Focus;
+		}
+	}
 }

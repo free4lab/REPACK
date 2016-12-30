@@ -1,4 +1,40 @@
 /* 分页 */
+.pagination>li{
+	>a,>span{
+		color:$paginationFontColor;
+		background-color: $paginationColor;
+    	border: 1px solid $paginationBorder;
+		
+		&:focus,&:hover{
+			color: $paginationFontColor_Focus;
+    		background-color: $paginationColor_Focus;
+    		border-color: $paginationBorder_Focus;
+		}
+	}
+}
+.pagination>.disabled>a {
+	&,&:hover,&:focus,&:active{
+		color: $paginationDisableFontColor;
+    	background-color: $paginationDisableColor;
+    	border-color: $paginationDisableBorder;
+		
+	}
+    
+}
+.pagination>.active{
+	>a,>span{
+		color: $paginationActiveFontColor;
+    	background-color: $paginationActiveColor;
+    	border-color: $paginationActiveBorder;
+    	
+    	&:focus,&:hover{
+    		color: $paginationActiveFontColor;
+    		background-color: $paginationActiveColor;
+    		border-color: $paginationActiveBorder;
+    	}
+	}
+}
+
 @media (max-width: 767px) {
   .pagination{
     width:100%;
@@ -12,21 +48,21 @@
     		border-radius:0px;
     		margin-left:0px;
     		border: 0px;
-    		border-bottom: 1px solid #ddd;
+    		border-bottom: 1px solid $paginationBorder;
     	}
     	
     	&:first-child{
     		>a,>span{
     			width: 100%;
     			border-radius:0px;
-    			border-top: 1px solid #ddd;
-    			border-bottom: 1px solid #ddd;
+    			border-top: 1px solid $paginationBorder;
+    			border-bottom: 1px solid $paginationBorder;
     		}
     	}
     	
     	&:nth-child(even):not(:last-child) > a,
     	&:first-child:not(:last-child) > span{
-    		border-right: 1px solid #ddd;
+    		border-right: 1px solid $paginationBorder;
     	}
     	
     	&:last-child{
@@ -34,7 +70,7 @@
     			width: 100%;
     			border-radius:0px;
     			margin-top: -1px;
-    			border-top: 1px solid #ddd;
+    			border-top: 1px solid $paginationBorder;
     		
     		}
     	}

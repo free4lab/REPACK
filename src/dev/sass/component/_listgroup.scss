@@ -1,0 +1,26 @@
+.list-group-item {
+    background-color: $listGroupItemColor;
+    border: 1px solid $listGroupItemBorder;
+}
+
+.nav-left-sub {
+    border-left: 1px solid $navLeftSubBorder;
+    border-right: 1px solid $navLeftSubBorder;
+    border-bottom: 1px solid $navLeftSubBorder;
+}
+a.list-group-item, button.list-group-item {
+    color: $listGroupItemFontColor;
+}
+a.list-group-item:focus, a.list-group-item:hover, button.list-group-item:focus, button.list-group-item:hover {
+    color: $listGroupItemFontColor_Focus;
+    background-color: $listGroupItemColor_Focus;
+}
+
+.list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover {
+    color: $listGroupItemFontColor_Active;
+    background-color: $listGroupItemColor_Active;
+    border-color: $listGroupItemBorder_Active;
+}
+.nav-left-sub .front-nav-left-sub-active {
+    background-color: $frontNavLeftSubActive;
+}
