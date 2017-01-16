@@ -7,6 +7,7 @@
 > 官方网站：[http://repack.free4inno.com/](http://repack.free4inno.com/)
 
 
+
 ##功能特点
 ###面向页面
 REPACK直接提供“页面”范例和模板，
@@ -26,6 +27,47 @@ REPACK基于Sass构建，易于定制、扩展和维护，
 使用gulp作为编译工具，框架编译简单易行！
 
 
+##文档
+### 快速开始 
+[http://repack.free4inno.com/start](http://repack.free4inno.com/start)
+
+**一份有关如何使用REPACK的指南和教程**，包括如下内容：
+
+1. 如何在您的项目中使用REPACK
+
+2. 如何使用REPACK提供的页面模版
+
+3. 如何使用REPACK提供的4种主题
+
+4. 如何利用gulp编译REPACK源码
+
+5. 如何自己开发和定制主题
+
+通过**快速开始**您可以在短时间内了解如何引入REPACK，以及如何使用REPACK提供的各项功能。
+
+###页面模版
+[http://repack.free4inno.com/layout](http://repack.free4inno.com/layout)
+
+REPACK提供十余种页面模版，涵盖大部分应用场景。
+
+在页面模版文档页我们提供模板信息、模板代码、模板截图以及下载包等内容。
+
+###组件
+[http://repack.free4inno.com/component](http://repack.free4inno.com/component)
+
+REPACK提供功能丰富的基础组件，如表格、按钮组、分页……，用于快速构建页面。
+
+###JS插件
+[http://repack.free4inno.com/plugin](http://repack.free4inno.com/plugin)
+
+在这里能够找到一系列用于完成复杂交互的JS插件，包括模态框、提示框、文件上传、图像上传、日期选择……
+
+只需简单的代码即可为应用引入高级功能。
+
+###辅助工具
+[http://repack.free4inno.com/other](http://repack.free4inno.com/other)
+
+REPACK还提供了一些常用的辅助样式与工具函数，主要用于优化用户体验。前者包括加载动画、转场动画等，工具函数则主要提供使用cookie和localStorage的接口。
 
 
 ## 开发者
