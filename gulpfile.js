@@ -71,7 +71,7 @@ gulp.task('dev:js', function () {
 });
 
 // Build For Dev
-gulp.task('dev:build', ['dev:fonts', 'dev:frontcss', 'dev:js']);
+gulp.task('dev:build', [ 'dev:frontcss', 'dev:js']);
 
 // Build Clean
 gulp.task('clean:dev', function () {
